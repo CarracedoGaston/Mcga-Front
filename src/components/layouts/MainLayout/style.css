@@ -7,13 +7,13 @@
   background-color: rgb(250, 252, 135);
 }
 
-#MainLayout a {
+#MainLayout #MenuContainer a {
   text-decoration: none;
   color: black;
 }
 
-#MainLayout a:hover {
-  color: green;
+#MainLayout #MenuContainer a:hover {
+  color: rgb(182, 97, 182);
 }
 
 #MenuButton {
@@ -41,10 +41,20 @@
   left: 0;
   width: 70%;
   height: 100%;
-  background-color: rgb(165, 165, 165);
+  background-color: rgb(180, 148, 187);
   border: 2px solid black;
 }
 
+#MenuContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  font-size: 125%;
+  font-family: georgia;
+}
 #MainContainer {
   width: 80%;
   height: 80%;
