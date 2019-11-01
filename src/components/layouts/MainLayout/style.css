@@ -4,6 +4,7 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background-color: rgb(250, 252, 135);
 }
 
 #MainLayout a {
@@ -15,12 +16,31 @@
   color: green;
 }
 
-#Menu {
+#MenuButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: fixed;
-  top: 8vh;
-  right: 0;
-  width: 30%;
-  height: 50%;
+  top: 2vh;
+  left: 3vw;
+  height: 20px;
+  width: 30px;
+}
+
+.line {
+  height: 15%;
+  width: 80%;
+  border-bottom: 2px solid black;
+}
+
+#Menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
   background-color: rgb(165, 165, 165);
   border: 2px solid black;
 }
