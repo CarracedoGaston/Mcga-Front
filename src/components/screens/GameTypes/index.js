@@ -2,7 +2,7 @@ import './style.css'
 import React, { Component } from 'react'
 import MainLayout from '../../layouts/MainLayout'
 
-class Buy extends Component {
+class GameTypes extends Component {
     render() {
         return (
             <MainLayout>
@@ -12,4 +12,4 @@ class Buy extends Component {
     }
 }
 
-export default Buy
+export default GameTypes
