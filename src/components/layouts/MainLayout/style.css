@@ -1,0 +1,16 @@
+#MainLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+#MainLayout a {
+  text-decoration: none;
+  color: black;
+}
+
+#MainLayout a:hover {
+  color: green;
+}
