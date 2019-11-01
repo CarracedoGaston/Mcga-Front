@@ -14,3 +14,19 @@
 #MainLayout a:hover {
   color: green;
 }
+
+#Menu {
+  position: fixed;
+  top: 8vh;
+  right: 0;
+  width: 30%;
+  height: 50%;
+  background-color: rgb(165, 165, 165);
+  border: 2px solid black;
+}
+
+#MainContainer {
+  width: 80%;
+  height: 80%;
+  border: 2px solid black;
+}

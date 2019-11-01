@@ -6,7 +6,9 @@ class GameTypes extends Component {
   render() {
     return (
       <MainLayout>
-        <h1>Game Types</h1>
+        <div className="Container GameTypes">
+          <h1>Game Types</h1>
+        </div>
       </MainLayout>
     )
   }

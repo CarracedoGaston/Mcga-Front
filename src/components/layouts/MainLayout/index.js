@@ -15,7 +15,9 @@ class MainLayout extends Component {
             <li><Link to="/statics">Statics</Link></li>
           </ul>
         </div>      
+        <div id="MainContainer">
         { this.props.children }
+        </div>
       </div>
     )
   }

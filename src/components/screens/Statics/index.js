@@ -6,7 +6,9 @@ class Statics extends Component {
   render() {
     return (
       <MainLayout>
-        <h1>Statics</h1>
+        <div className="Container Statics">
+          <h1>Statics</h1>
+        </div>
       </MainLayout>
     )
   }

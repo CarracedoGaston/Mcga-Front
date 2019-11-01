@@ -6,7 +6,9 @@ class Login extends Component {
   render() {
     return (
       <MainLayout>
-        <h1>Login</h1>
+        <div className="Container Login">
+          <h1>Login</h1>
+        </div>
       </MainLayout>
     )
   }
