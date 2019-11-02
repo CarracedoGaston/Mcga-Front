@@ -33,12 +33,13 @@ class MainLayout extends Component {
             <div className="line"></div>
         </div>
         <div id="Menu">
+        <div id="ImgTop"></div>
           <ul id="MenuContainer">
             <li className="link"><Link to="/home" >Home</Link></li>
-            <li><Link to="/login" className="link">Login</Link></li>
-            <li><Link to="/gametypes" className="link">Game Types</Link></li>
-            <li><Link to="/questions" className="link">Questions</Link></li>
-            <li><Link to="/statics" className="link">Statics</Link></li>
+            <li className="link"><Link to="/login">Login</Link></li>
+            <li className="link"><Link to="/gametypes">Game Types</Link></li>
+            <li className="link"><Link to="/questions">Questions</Link></li>
+            <li className="link"><Link to="/statics">Statics</Link></li>
           </ul>
         </div>      
         <div id="MainContainer">
