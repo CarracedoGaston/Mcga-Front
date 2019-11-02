@@ -28,9 +28,6 @@ class MainLayout extends Component {
     return (
       <div id="MainLayout" >
         <div id="MenuButton" onClick={this.MenuShowHide}>
-            <div className="line"></div>
-            <div className="line"></div>
-            <div className="line"></div>
         </div>
         <div id="Menu">
         <div id="ImgTop"></div>
