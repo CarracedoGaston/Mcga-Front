@@ -9,6 +9,7 @@
 #MainLayout #MenuContainer a {
   text-decoration: none;
   color: rgb(100, 97, 97);
+  /* border-bottom: 1px solid black; Button Line */
 }
 
 #MainLayout #MenuContainer a:hover {
@@ -54,19 +55,19 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  width: 90%;
+  width: 100%;
   font-size: 125%;
   font-family: sans-serif;
   margin-top: 5%;
-  margin-left: 10%;
+  /* margin-left: 10%; */
 }
 
 .link {
   display: flex;
   align-items: center;
   height: 10%;
-  width: 90%;
-  margin: 5%;
+  width: 100%;
+  margin: 10%;
 }
 
 #ImgTop {
