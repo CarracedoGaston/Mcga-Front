@@ -8,6 +8,7 @@ class GameTypes extends Component {
       <MainLayout>
         <div className="Container GameTypes">
           <h1>Game Types</h1>
+          <h1>Game 2222</h1>
         </div>
       </MainLayout>
     )
