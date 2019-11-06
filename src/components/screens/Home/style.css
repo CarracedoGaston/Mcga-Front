@@ -47,6 +47,9 @@
 #staticsImgExample {
   height: 25%;
   width: 40%;
-  border: 1px solid black;
+  border: 5px solid rgb(82, 63, 165);
   border-radius: 50%;
+  background-image: url('../../../assets/Static.png');
+  background-repeat: no-repeat;
+  background-position: center center;  
 }
