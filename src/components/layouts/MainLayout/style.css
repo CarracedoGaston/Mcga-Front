@@ -23,8 +23,9 @@
   font-family: Tahoma;
   letter-spacing: 2px;
   font-size: 200%;
-
+  /* color: rgb(105, 73, 247); */
 }
+
 #MenuButton {
   position: fixed;
   top: 11px;
@@ -63,7 +64,7 @@
   justify-content: space-around;
   height: 100%;
   width: 100%;
-  font-size: 25px;
+  font-size: 20px;
   font-family: Roboto;
   font-weight: 500;
 }

@@ -8,7 +8,12 @@ class Home extends Component {
       <MainLayout>
         <div className="Container">
           <div id="questionPlay">
-            <h1>Home</h1>
+            <div id="questioToAnswer">
+              <h1>Wich sport do you prefer?</h1>
+            </div>  
+            <div className="buttonAnswer">Basquet</div>
+            <div className="buttonAnswer">Football</div>
+            <div className="buttonAnswer">Tennis</div>
           </div>
           <div id="staticsImgExample"></div>
         </div>
