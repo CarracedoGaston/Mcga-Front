@@ -26,7 +26,10 @@ class MainLayout extends Component {
   }
   render() {
     return (
-      <div id="MainLayout" >
+      <div id="MainLayout">
+        <div id="header">
+          {window.location.pathname.split('/')}
+        </div>
         <div id="MenuButton" onClick={this.MenuShowHide}>
         </div>
         <div id="Menu">
