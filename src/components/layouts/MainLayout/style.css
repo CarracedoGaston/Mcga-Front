@@ -8,6 +8,8 @@
 
 #MainLayout #MenuContainer a {
   text-decoration: none;
+  width: 92%;
+  height: 15%;
   color: rgb(100, 97, 97);
   /* border-bottom: 1px solid black; Button Line */
 }
@@ -36,7 +38,8 @@
   left: 0;
   width: 80%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 1); /*transparency*/
+  /* background-color: rgba(255, 255, 255, 1) */
+  background: rgb(14, 13, 13);
   border-right: 2px solid black;
 }
 
@@ -54,20 +57,49 @@
 #MenuContainer{
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   height: 100%;
   width: 100%;
+  margin-left: 8%;
   font-size: 125%;
   font-family: sans-serif;
-  margin-top: 5%;
-  /* margin-left: 10%; */
 }
 
 .link {
   display: flex;
   align-items: center;
-  height: 10%;
+  height: 100%;
   width: 100%;
-  margin: 10%;
+  margin-left: 0;
+}
+
+.imgsMenu {
+  width: 35px;
+  height: 35px; 
+  background-size: cover;                 
+  background-repeat: no-repeat;
+  background-position: center center;  
+  margin-right: 13%;
+}
+
+#homeImg {
+  background-image: url('../../../assets/Home.png');
+}
+
+#loginImg {
+  background-image: url('../../../assets/Player.png');
+}
+
+#gameImg {
+  background-image: url('../../../assets/Play.png');
+}
+
+#questionImg {
+  background-image: url('../../../assets/Questions.png');
+}
+
+#staticImg {
+  background-image: url('../../../assets/Stats.png');
 }
 
 #ImgTop {
