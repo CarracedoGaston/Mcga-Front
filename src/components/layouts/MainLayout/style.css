@@ -7,11 +7,8 @@
 }
 
 #MainLayout #MenuContainer a {
+  margin-left: 5%;
   text-decoration: none;
-  width: 92%;
-  height: 15%;
-  color: rgb(100, 97, 97);
-  /* border-bottom: 1px solid black; Button Line */
 }
 
 #MainLayout #MenuContainer a:hover {
@@ -38,20 +35,16 @@
   left: 0;
   width: 80%;
   height: 100%;
-  /* background-color: rgba(255, 255, 255, 1) */
-  background: rgb(14, 13, 13);
-  border-right: 2px solid black;
+  background-color: white;
 }
 
-#Dark {
-  display: none;
-  position: fixed;
-  top: 0;
-  right: 0;
-  width: 20%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.4;
+#ImgTop {
+  width: 100%;
+  height: 20%;
+  background-image: url('../../../assets/MenuBackGround.jpeg');
+  background-size: cover;                 
+  background-repeat: no-repeat;
+  background-position: center center;  
 }
 
 #MenuContainer{
@@ -60,26 +53,48 @@
   justify-content: space-around;
   height: 100%;
   width: 100%;
-  margin-left: 8%;
-  font-size: 125%;
-  font-family: sans-serif;
+  font-size: 25px;
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+#publicSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 30%;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+
+#privateSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 70%;
+  width: 95%;
+}
+
+#publicSection a {
+  color: rgb(68, 67, 67);
+}
+
+#privateSection a {
+  color: rgb(143, 143, 143);
 }
 
 .link {
   display: flex;
   align-items: center;
-  height: 100%;
-  width: 100%;
-  margin-left: 0;
 }
 
 .imgsMenu {
-  width: 35px;
-  height: 35px; 
+  width: 30px;
+  height: 30px; 
+  margin-right: 5%;
   background-size: cover;                 
   background-repeat: no-repeat;
   background-position: center center;  
-  margin-right: 13%;
 }
 
 #homeImg {
@@ -102,17 +117,19 @@
   background-image: url('../../../assets/Stats.png');
 }
 
-#ImgTop {
-  width: 100%;
-  height: 20%;
-  background-image: url('../../../assets/MenuBackGround.jpeg');
-  background-size: cover;                 
-  background-repeat: no-repeat;
-  background-position: center center;  
-}
-
 #MainContainer {
   width: 80%;
   height: 80%;
   border: 2px solid black;
+}
+
+#Dark {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 20%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
 }

@@ -30,23 +30,27 @@ class MainLayout extends Component {
         <div id="MenuButton" onClick={this.MenuShowHide}>
         </div>
         <div id="Menu">
-        <div id="ImgTop"></div>
+          <div id="ImgTop"></div>
           <ul id="MenuContainer">
-            <Link to="/home"><li className="link">
-              <div id="homeImg" className="imgsMenu"></div>Home</li>
-            </Link>
-            <Link to="/login"><li className="link">
-              <div id="loginImg" className="imgsMenu"></div>Login</li>
-            </Link>
-            <Link to="/gametypes"><li className="link">
-              <div id="gameImg" className="imgsMenu"></div>Game Types</li>
-            </Link>
-            <Link to="/questions"><li className="link">
-              <div id="questionImg" className="imgsMenu"></div>Questions</li>
-            </Link>
-            <Link to="/statics"><li className="link">
-              <div id="staticImg" className="imgsMenu"></div>Statics</li>
-            </Link>
+            <div id="publicSection">
+              <Link to="/home"><li className="link">
+                <div id="homeImg" className="imgsMenu"></div>Home</li>
+              </Link>
+              <Link to="/login"><li className="link">
+                <div id="loginImg" className="imgsMenu"></div>Login</li>
+              </Link>
+            </div>
+            <div id="privateSection">
+              <Link to="/gametypes"><li className="link">
+                <div id="gameImg" className="imgsMenu"></div>Game Types</li>
+              </Link>
+              <Link to="/questions"><li className="link">
+                <div id="questionImg" className="imgsMenu"></div>Questions</li>
+              </Link>
+              <Link to="/statics"><li className="link">
+                <div id="staticImg" className="imgsMenu"></div>Statics</li>
+              </Link>
+            </div>
           </ul>
         </div>      
         <div id="MainContainer">
