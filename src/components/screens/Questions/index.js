@@ -8,18 +8,17 @@ class Questions extends Component {
       <MainLayout>
         <div className="Container">
           <div id="newQuestion">
-            <div id="questioToAnswer">
-              <h1>New question?</h1>
+            <div id="questionToMake">
+              <h1>Insert your new Question!!</h1>
             </div>  
-            <div className="inputAnswer">Answer 1</div>
-            <div className="inputAnswer">Answer 2</div>
-            <div className="inputAnswer">Answer 3</div>
+            <div className="inputAnswer">Answer...</div>
+            <div className="inputAnswer">Answer...</div>
+            <div className="inputAnswer">Answer...</div>
           </div>
           <div id="buttonNewQuestion">
-            <div className="buttonQuestion">Game Type</div>
-            <div className="buttonQuestion">Save Question</div>
+            <button className="buttonQuestion">Game Type</button>
+            <button className="buttonQuestion">Save Question</button>
           </div>
-          <h1>Questions</h1>
         </div>
       </MainLayout>
     )

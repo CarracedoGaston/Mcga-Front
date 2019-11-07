@@ -3,38 +3,33 @@
   width: 100%;
 }
 
-.Questions {
-  background-color: rgb(157, 66, 199);
-}
-
 #selectStatic {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 60%;
+  height: 55%;
   width: 90%;
   border-radius: 5px;
 }
 
-.selectQuestion {
+.staticQuestion {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 80%;
   height: 10%;
-  border: 2px solid rgb(82, 63, 165);
+  border: 2px solid rgb(120, 72, 156);
   background-color: white;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 
-.selectQuestion {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  height: 10%;
-  border: 2px solid rgb(82, 63, 165);
-  background-color: white;
-  border-radius: 5px;
+#staticsImgExamp {
+  height: 25%;
+  width: 40%;
+  border: 5px solid rgb(120, 72, 156);
+  border-radius: 50%;
+  background-image: url('../../../assets/Static.png');
+  background-repeat: no-repeat;
+  background-position: center center;  
 }

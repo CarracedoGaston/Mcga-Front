@@ -8,15 +8,13 @@ class Statics extends Component {
       <MainLayout>
         <div className="Container">
           <div id="selectStatic">      
-            <div className="selectQuestion">question 1</div>
-            <div className="selectQuestion">question 2</div>
-            <div className="selectQuestion">question 3</div>
-            <div className="selectQuestion">question 4</div>
-            <div className="selectQuestion">question 5</div>
-            <div className="selectQuestion">question 6</div>
-            <div className="selectQuestion">question 7</div>
+            <div className="staticQuestion">Which sport do you prefer?</div>
+            <div className="staticQuestion">What type of person you are?</div>
+            <div className="staticQuestion">How old are you?</div>
+            <div className="staticQuestion">Which color do you prefer?</div>
+            <div className="staticQuestion">What is your sex?</div>
           </div>
-          <div id="staticsImgExample"></div>
+          <div id="staticsImgExamp"></div>
         </div>
       </MainLayout>
     )

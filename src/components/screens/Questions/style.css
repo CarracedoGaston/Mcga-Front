@@ -3,10 +3,6 @@
   width: 100%;
 }
 
-.Questions {
-  background-color: rgb(157, 66, 199);
-}
-
 #newQuestion {
   display: flex;
   flex-direction: column;
@@ -17,15 +13,15 @@
   border-radius: 5px;
 }
 
-#questioToAnswer {
+#questionToMake {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 80%;
   height: 40%;
-  border: 2px solid rgb(82, 63, 165);
+  border: 2px solid rgb(59, 136, 131);
   background-color: white;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .inputAnswer {
@@ -34,29 +30,27 @@
   align-items: center;
   width: 80%;
   height: 10%;
-  border: 2px solid rgb(82, 63, 165);
+  border: 2px solid rgb(59, 136, 131);
   background-color: white;
-  border-radius: 5px;
+  border-radius: 25px;
 }
 
 #buttonNewQuestion {
   display: flex;
   flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  height: 30%;
+  height: 20%;
   width: 90%;
-  border-radius: 5px;
-  margin-top: 60px;
+  border-radius: 25px;
 }
 
 .buttonQuestion {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  height: 20%;
-  border: 2px solid rgb(82, 63, 165);
-  background-color: rgb(243, 241, 154);
-  border-radius: 5px;
-  margin: 5px;
+  height: 30%;
+  width: 50%;
+  border: 2px solid rgb(59, 136, 131);
+  border-radius: 25px;
 }

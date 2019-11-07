@@ -7,16 +7,16 @@ class GameTypes extends Component {
     return (
       <MainLayout>
         <div className="Container">
-          <div id="selectStatic">      
-            <div className="selectQuestion">Sports</div>
-            <div className="selectQuestion">History</div>
-            <div className="selectQuestion">Movies</div>
-            <div className="selectQuestion">Languages</div>
-            <div className="selectQuestion">Fashion</div>
-            <div className="selectQuestion">Foods</div>
+          <div id="gameQuestion">      
+            <div className="gameQuestion">Sports</div>
+            <div className="gameQuestion">History</div>
+            <div className="gameQuestion">Movies</div>
+            <div className="gameQuestion">Languages</div>
+            <div className="gameQuestion">Fashion</div>
+            <div className="gameQuestion">Foods</div>
           </div>
           <div id="buttonPanel">
-            <div className="buttonBack">Back</div>
+            <button className="buttonBack">Back</button>
           </div>
         </div>
       </MainLayout>
