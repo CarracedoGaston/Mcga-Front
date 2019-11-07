@@ -151,7 +151,6 @@
   color: blue;
 }
 
-
 @keyframes moveMenu {
   from {left: -80%;}
   to {left: 0;}
