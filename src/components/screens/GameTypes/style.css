@@ -17,10 +17,6 @@
   border-radius: 5px;
 }
 
-.color {
-  color: rgb(105, 73, 247); 
-}
-
 .selectQuestion {
   display: flex;
   justify-content: center;

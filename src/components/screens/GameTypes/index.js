@@ -7,7 +7,7 @@ class GameTypes extends Component {
     return (
       <MainLayout>
         <div className="Container">
-        <div id="selectStatic">      
+          <div id="selectStatic">      
             <div className="selectQuestion">Sports</div>
             <div className="selectQuestion">History</div>
             <div className="selectQuestion">Movies</div>

@@ -19,6 +19,7 @@ class Questions extends Component {
             <div className="buttonQuestion">Game Type</div>
             <div className="buttonQuestion">Save Question</div>
           </div>
+          <h1>Questions</h1>
         </div>
       </MainLayout>
     )
