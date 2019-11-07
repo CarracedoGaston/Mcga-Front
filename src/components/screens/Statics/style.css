@@ -3,6 +3,42 @@
   width: 100%;
 }
 
-.Statics {
-  background-color: rgb(199, 66, 128);
+.Questions {
+  background-color: rgb(157, 66, 199);
+}
+
+#selectStatic {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 60%;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.color {
+  color: rgb(105, 73, 247); 
+}
+
+.selectQuestion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 10%;
+  border: 2px solid rgb(82, 63, 165);
+  background-color: white;
+  border-radius: 5px;
+}
+
+.selectQuestion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 10%;
+  border: 2px solid rgb(82, 63, 165);
+  background-color: white;
+  border-radius: 5px;
 }
