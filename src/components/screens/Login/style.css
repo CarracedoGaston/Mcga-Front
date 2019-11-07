@@ -26,27 +26,44 @@
   border-radius: 5px;
 }
 
-.inputLogin {
+.inputLogin, #inputCreateAccount {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 80%;
   height: 20%;
-  border: 2px solid rgb(141, 23, 135); 
+  border: 2px solid rgb(148, 11, 139); 
   background-color: white;
   border-radius: 5px;
 }
 
+#inputCreateAccount, #buttonSave {
+  display: none;
+}
+
 #buttonsLoginContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   height: 15%;
-  width: 50%;
+  width: 80%;
 }
 
 .buttonLogin {
-  border: 2px solid rgb(141, 23, 135); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(148, 11, 139); 
   border-radius: 5px;
-  height: 35%;
+  height: 50%;
+  width: 30%;
+}
+
+#createAccount {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  font-weight: bold;
+  color: rgb(70, 5, 66); 
 }
