@@ -9,7 +9,7 @@ class Home extends Component {
         <div className="Container">
           <div id="questionPlay">
             <div id="questioToAnswer">
-              <h1>Wich sport do you prefer?</h1>
+              <h1>Which sport do you prefer?</h1>
             </div>  
             <div className="buttonAnswer">Basquet</div>
             <div className="buttonAnswer">Football</div>

@@ -35,23 +35,23 @@ class MainLayout extends Component {
     switch(window.location.pathname.split('/')[1]) {
       case 'home':
         this.setState({colorHeader: 'rgb(105, 73, 247)'})
-        this.setState({backgroundApp: 'rgb(120, 91, 248)'})
+        this.setState({backgroundApp: 'rgb(202, 192, 247)'})
         break
       case 'login':
         this.setState({colorHeader: 'rgb(231, 56, 223)'})
-        this.setState({backgroundApp: 'rgb(196, 92, 161)'})
+        this.setState({backgroundApp: 'rgb(243, 192, 247)'})
         break
       case 'gametypes':
         this.setState({colorHeader: 'rgb(228, 66, 134)'})
-        this.setState({backgroundApp: 'rgb(221, 94, 147)'})
+        this.setState({backgroundApp: 'rgb(247, 192, 224)'})
         break
       case 'questions':
         this.setState({colorHeader: 'rgb(44, 188, 207)'})
-        this.setState({backgroundApp: 'rgb(100, 199, 212)'})
+        this.setState({backgroundApp: 'rgb(192, 247, 243)'})
         break
       case 'statics':
         this.setState({colorHeader: 'rgb(124, 10, 177)'})
-        this.setState({backgroundApp: 'rgb(152, 77, 187)'})
+        this.setState({backgroundApp: 'rgb(222, 192, 247)'})
         break
       default:
         this.setState({colorHeader: 'black'})
