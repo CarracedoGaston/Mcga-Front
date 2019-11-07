@@ -1,3 +1,4 @@
+  
 .Container {
   height: 100%;
   width: 100%;
@@ -5,4 +6,62 @@
 
 .Questions {
   background-color: rgb(157, 66, 199);
+}
+
+#newQuestion {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 60%;
+  width: 90%;
+  border-radius: 5px;
+}
+
+.color {
+  color: rgb(105, 73, 247); 
+}
+
+#questioToAnswer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 40%;
+  border: 2px solid rgb(82, 63, 165);
+  background-color: white;
+  border-radius: 5px;
+}
+
+.inputAnswer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 10%;
+  border: 2px solid rgb(82, 63, 165);
+  background-color: white;
+  border-radius: 5px;
+}
+
+#buttonNewQuestion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 30%;
+  width: 90%;
+  border-radius: 5px;
+  margin-top: 60px;
+}
+
+.buttonQuestion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 20%;
+  border: 2px solid rgb(82, 63, 165);
+  background-color: rgb(243, 241, 154);
+  border-radius: 5px;
+  margin: 5px;
 }
