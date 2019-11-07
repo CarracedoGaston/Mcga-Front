@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0b432568b1c2057697daa1a2d8a20d64",
+    "revision": "744b50c5951df740ac0505791b6b3ce0",
     "url": "/Mcga-Front/index.html"
   },
   {
