@@ -6,7 +6,7 @@ class Questions extends Component {
   render() {
     return (
       <MainLayout>
-        <div className="Container Questions">
+        <div className="Container">
           <h1>Questions</h1>
         </div>
       </MainLayout>
