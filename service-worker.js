@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/Mcga-Front/precache-manifest.37ef4769f4ea1ec8e95d3caa67d45324.js"
+  "/Mcga-Front/precache-manifest.f4e7abdd93ce3b98bf2a018157b4ce27.js"
 );
 
 self.addEventListener('message', (event) => {
