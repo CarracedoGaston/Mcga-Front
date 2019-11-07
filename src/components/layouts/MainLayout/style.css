@@ -23,7 +23,6 @@
   font-family: Tahoma;
   letter-spacing: 2px;
   font-size: 200%;
-  /* color: rgb(105, 73, 247); */
 }
 
 #MenuButton {
@@ -142,4 +141,8 @@
   height: 100%;
   background-color: black;
   opacity: 0.4;
+}
+
+.color {
+  color: blue;
 }

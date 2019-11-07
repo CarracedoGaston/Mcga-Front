@@ -1,8 +1,52 @@
 .Container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   height: 100%;
   width: 100%;
 }
 
-.Login {
-  background-color: rgb(66, 183, 199);
+#login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 60%;
+  width: 90%;
+  border-radius: 5px;
+}
+
+#login {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  height: 30%;
+  border-radius: 5px;
+}
+
+.inputLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 20%;
+  border: 2px solid rgb(141, 23, 135); 
+  background-color: white;
+  border-radius: 5px;
+}
+
+#buttonsLoginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 15%;
+  width: 50%;
+}
+
+.buttonLogin {
+  border: 2px solid rgb(141, 23, 135); 
+  border-radius: 5px;
+  height: 35%;
 }
