@@ -43,9 +43,11 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 200;
   width: 80%;
   height: 100%;
   background-color: white;
+  animation: moveMenu 1s 1;
 }
 
 #ImgTop {
@@ -137,12 +139,25 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 20%;
+  z-index: 100;
+  width: 100%;
   height: 100%;
   background-color: black;
   opacity: 0.4;
+  animation: moveDark 1s 1;
 }
 
 .color {
   color: blue;
+}
+
+
+@keyframes moveMenu {
+  from {left: -80%;}
+  to {left: 0;}
+}
+
+@keyframes moveDark {
+  from{left: 0;}
+  to {left: 80%;}
 }
