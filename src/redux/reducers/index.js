@@ -7,10 +7,10 @@ import statics from './statics'
 import users from './users'
 
 export default combineReducers({
-    gameType,
-    login, 
-    questions,
-    statics,
-    home,
-    users
+  gameType,
+  login, 
+  questions,
+  statics,
+  home,
+  users
 })
