@@ -1,13 +1,12 @@
 const initialState = {
     isLoading: false,
     error: '',
-    data: {
-        name: 'La china',
-        email: 'mejorprofe@gmail.com',
-        role: 'teacher'
-    }
+    list: [ 
+        {name: 'La china',email: 'mejorprofe@gmail.com'},
+        {name: 'juan',email: 'juancho@gmail.com'},
+        {name: 'mariana',email: 'mariana@gmail.com'},        
+    ]
 }
-
 
 const reducer = (state=initialState, action) => {
     switch(action.type) {

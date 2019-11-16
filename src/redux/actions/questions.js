@@ -4,7 +4,7 @@ export const addQuestions = () => {
     return {
         type: ADD_QUESTION,
         payload: {
-            d: Date.now(), user: 1,  gameType: 1, title:'New question',
+            id: Date.now(), user: 1,  gameType: 1, title:'New question',
             firstAnswer: 'ans1',
             secondAnswer: 'ans2',
             thirdAnswer: 'ans3',
