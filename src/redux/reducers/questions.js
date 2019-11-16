@@ -18,7 +18,7 @@ const initialState = {
         thirdAnswer: 'meat',
         firstQuantity: 1,
         secondQuantity: 0,
-        thirdQuantity: 3},
+        thirdQuantity: 3}
     ]
 }
 
