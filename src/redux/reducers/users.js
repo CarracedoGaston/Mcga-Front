@@ -3,8 +3,7 @@ const initialState = {
     error: '',
     data: {
         name: 'La china',
-        email: 'mejorprofe@gmail.com',
-        role: 'teacher'
+        email: 'mejorprofe@gmail.com'
     }
 }
 
