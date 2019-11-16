@@ -2,7 +2,9 @@ const initialState = {
   isLoading: false,
   error: '',
   data: {
-    id: Date.now(), user: 1,  gameType: 1, title:'What food do you prefer?',
+    user: 1, 
+    gameType: 1, 
+    title:'What food do you prefer?',
     firstAnswer: 'meat',
     secondAnswer: 'pasta',
     thirdAnswer: 'pizza',
