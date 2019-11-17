@@ -36,7 +36,7 @@ const reducer = (state=initialState, action) => {
     case ADD_QUESTION:
       return {
         ...state,
-        list: [...state.list, action.payload]  
+        list: [...state.list, action.payload]
       }
       default:
         return state

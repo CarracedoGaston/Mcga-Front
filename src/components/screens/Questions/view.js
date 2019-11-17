@@ -6,11 +6,11 @@ class Questions extends Component {
   // constructor(props) {
   //   super(props)
   // }
-  renderList = list => {
-    return list.map(question => {
-        return <li key={question.id}>Name: {question.firstAnswer} </li>
-    })
-  }
+  // renderList = list => {
+  //   return list.map(question => {
+  //       return <li key={question.id}>Name: {question.firstAnswer} </li>
+  //   })
+  // }
   add = () => {
     this.props.addQuestions()
   }
@@ -19,21 +19,20 @@ class Questions extends Component {
       <MainLayout>
         <div className="Container">
           <div id="newQuestion">
-            <div id="questionToMake">
-              <h1>Insert your new Question!!</h1>
-            </div>  
-            <div className="inputAnswer">Answer...</div>
-            <div className="inputAnswer">Answer...</div>
-            <div className="inputAnswer">Answer...</div>
+            <textarea id="questionToMake" placeholder="Insert your new Question!!" />  
+            <input className="inputAnswer" id="questionFirstAnswer" placeholder="First Answer..." />
+            <input className="inputAnswer" placeholder="Second Answer..." />
+            <input className="inputAnswer" placeholder="Third Answer..." />
           </div>
           <div id="buttonNewQuestion">
             <button className="buttonQuestion">Game Type</button>
-            <button className="buttonQuestion">Save Question</button>
+            <button className="buttonQuestion" onClick={this.add}>Save Question</button>
           </div>
-          <ul>
+          {/* <ul>
             { this.renderList(this.props.questions) }
-          </ul>
-            <button onClick={this.add}>Add</button>
+            { console.log(this.props.questions )}
+          </ul> */}
+           { console.log(this.props.questions )}
         </div>
       </MainLayout>
     )
