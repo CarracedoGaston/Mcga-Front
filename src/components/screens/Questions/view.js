@@ -13,6 +13,11 @@ class Questions extends Component {
   // }
   add = () => {
     this.props.addQuestions()
+    window.alert('Question Saved')
+    document.getElementById('questionToMake').value = null
+    document.getElementById('questionFirstAnswer').value = null
+    document.getElementById('questionSecondtAnswer').value = null
+    document.getElementById('questionThirdAnswer').value = null
   }
   render() {
     return (
@@ -21,8 +26,8 @@ class Questions extends Component {
           <div id="newQuestion">
             <textarea id="questionToMake" placeholder="Insert your new Question!!" />  
             <input className="inputAnswer" id="questionFirstAnswer" placeholder="First Answer..." />
-            <input className="inputAnswer" placeholder="Second Answer..." />
-            <input className="inputAnswer" placeholder="Third Answer..." />
+            <input className="inputAnswer" id="questionSecondtAnswer" placeholder="Second Answer..." />
+            <input className="inputAnswer" id="questionThirdAnswer" placeholder="Third Answer..." />
           </div>
           <div id="buttonNewQuestion">
             <button className="buttonQuestion">Game Type</button>
