@@ -3,37 +3,40 @@ import React, { Component } from 'react'
 import MainLayout from '../../layouts/MainLayout'
 
 class Questions extends Component {
-  // constructor(props) {
-  //   super(props)
-  // }
-  renderList = list => {
-    return list.map(question => {
-        return <li key={question.id}>Name: {question.firstAnswer} </li>
-    })
-  }
   add = () => {
-    this.props.addQuestions()
+    if (
+      document.getElementById('questionToMake').value !== "" &&
+      document.getElementById('questionFirstAnswer').value !== "" &&
+      document.getElementById('questionSecondtAnswer').value !== "" &&
+      document.getElementById('questionThirdAnswer').value !== ""
+    ){
+      this.props.addQuestions()
+      window.alert('Question Saved')
+      document.getElementById('questionToMake').value = ""
+      document.getElementById('questionFirstAnswer').value = ""
+      document.getElementById('questionSecondtAnswer').value = ""
+      document.getElementById('questionThirdAnswer').value = ""
+    }
+    else {
+      window.alert('Complete all the data')
+      return
+    } 
   }
+
   render() {
     return (
       <MainLayout>
         <div className="Container">
           <div id="newQuestion">
-            <div id="questionToMake">
-              <h1>Insert your new Question!!</h1>
-            </div>  
-            <div className="inputAnswer">Answer...</div>
-            <div className="inputAnswer">Answer...</div>
-            <div className="inputAnswer">Answer...</div>
+            <textarea id="questionToMake" placeholder="Insert your new Question!!" />  
+            <input className="inputAnswer" id="questionFirstAnswer" placeholder="First Answer..." />
+            <input className="inputAnswer" id="questionSecondtAnswer" placeholder="Second Answer..." />
+            <input className="inputAnswer" id="questionThirdAnswer" placeholder="Third Answer..." />
           </div>
           <div id="buttonNewQuestion">
-            <button className="buttonQuestion">Game Type</button>
-            <button className="buttonQuestion">Save Question</button>
+            <button className="buttonQuestion" onClick={this.add}>Save Question</button>
           </div>
-          <ul>
-            { this.renderList(this.props.questions) }
-          </ul>
-            <button onClick={this.add}>Add</button>
+           { console.log(this.props.questions )}
         </div>
       </MainLayout>
     )

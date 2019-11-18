@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 60%;
+  height: 65%;
   width: 90%;
   border-radius: 5px;
 }
@@ -30,6 +30,7 @@
   align-items: center;
   width: 80%;
   height: 10%;
+  text-align: center;
   border: 2px solid rgb(59, 136, 131);
   background-color: white;
   border-radius: 25px;
@@ -40,7 +41,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  height: 20%;
+  height: 15%;
   width: 90%;
   border-radius: 25px;
 }
@@ -49,7 +50,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30%;
+  height: 40%;
   width: 50%;
   border: 2px solid rgb(59, 136, 131);
   border-radius: 25px;
