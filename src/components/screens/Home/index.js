@@ -1,25 +1,18 @@
-import './style.css'
-import React, { Component } from 'react'
-import MainLayout from '../../layouts/MainLayout'
+import { connect } from 'react-redux'
+// import { bindActionCreators } from 'redux'
+import Home from './view'
 
-class Home extends Component {
-  render() {
-    return (
-      <MainLayout>
-        <div className="Container">
-          <div id="questionPlay">
-            <div id="questionToAnswer">
-              <h1>Which sport do you prefer?</h1>
-            </div>  
-            <div className="buttonAnswer">Basquet</div>
-            <div className="buttonAnswer">Football</div>
-            <div className="buttonAnswer">Tennis</div>
-          </div>
-          <div id="staticsImgExample"></div>
-        </div>
-      </MainLayout>
-    )
+const mapStateToProps = (state, ownProps) => {
+  return {
+    questions: state.questions.list,
+    isLoading: state.questions.isLoading
   }
 }
 
-export default Home
+// const mapDispatchToProps = dispatch => {
+//   return bindActionCreators(
+//     dispatch
+//   )
+// }
+
+export default connect(mapStateToProps/*, mapDispatchToProps*/)(Home)
