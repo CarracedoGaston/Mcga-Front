@@ -41,10 +41,6 @@ class MainLayout extends Component {
         this.setState({colorHeader: 'rgb(231, 56, 223)'})
         this.setState({backgroundApp: 'rgb(243, 192, 247)'})
         break
-      case 'gametypes':
-        this.setState({colorHeader: 'rgb(228, 66, 134)'})
-        this.setState({backgroundApp: 'rgb(247, 192, 224)'})
-        break
       case 'questions':
         this.setState({colorHeader: 'rgb(44, 188, 207)'})
         this.setState({backgroundApp: 'rgb(192, 247, 243)'})
@@ -80,9 +76,6 @@ class MainLayout extends Component {
               </Link>
             </div>
             <div id="privateSection">
-              <Link to="/gametypes"><li className="link">
-                <div id="gameImg" className="imgsMenu"></div>Game Types</li>
-              </Link>
               <Link to="/questions"><li className="link">
                 <div id="questionImg" className="imgsMenu"></div>Questions</li>
               </Link>
