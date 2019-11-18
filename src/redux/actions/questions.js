@@ -1,5 +1,4 @@
 export const ADD_QUESTION = 'mcga/ADD_QUESTION'
-export const ADD_FIRST_QUANTITY = 'mcga/ADD_FIRST_QUANTITY'
 
 export const addQuestions = () => {
   return {
