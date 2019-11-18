@@ -12,7 +12,6 @@ class Home extends Component {
         <div className="Container">
           {!(this.props.position===this.props.questions.length)?
           <div id="questionPlay">
-            {console.log(this.props.position)}
             <div id="questionToAnswer">
               <h1>{this.props.questions[this.props.position].title}</h1>
             </div>  

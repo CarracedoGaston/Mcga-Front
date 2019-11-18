@@ -10,7 +10,6 @@ const reducer = (state=initialState, action) => {
   switch(action.type) {  
     case ADD_POSITION:
       return{
-        ...state,
         position: state.position + 1
       }     
     default:
