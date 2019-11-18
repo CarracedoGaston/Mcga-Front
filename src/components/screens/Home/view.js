@@ -3,28 +3,22 @@ import React, { Component } from 'react'
 import MainLayout from '../../layouts/MainLayout'
 
 class Home extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      questionPosition: 0,
-    }
-  }
   choose = () => {
-    this.setState({questionPosition: this.state.questionPosition + 1})
+    this.props.addPosition()
   }
-
   render() { 
     return (
       <MainLayout>
         <div className="Container">
-          {!(this.state.questionPosition===this.props.questions.length)?
+          {!(this.props.position===this.props.questions.length)?
           <div id="questionPlay">
+            {console.log(this.props.position)}
             <div id="questionToAnswer">
-              <h1>{this.props.questions[this.state.questionPosition].title}</h1>
+              <h1>{this.props.questions[this.props.position].title}</h1>
             </div>  
-            <button className="buttonAnswer" onClick={this.choose}>{this.props.questions[this.state.questionPosition].firstAnswer}</button>
-            <button className="buttonAnswer" onClick={this.choose}>{this.props.questions[this.state.questionPosition].secondAnswer}</button>
-            <button className="buttonAnswer" onClick={this.choose}>{this.props.questions[this.state.questionPosition].thirdAnswer}</button>
+            <button className="buttonAnswer" onClick={this.choose}>{this.props.questions[this.props.position].firstAnswer}</button>
+            <button className="buttonAnswer" onClick={this.choose}>{this.props.questions[this.props.position].secondAnswer}</button>
+            <button className="buttonAnswer" onClick={this.choose}>{this.props.questions[this.props.position].thirdAnswer}</button>
           </div>
           :
           <div>No more questions. Try Later</div>}

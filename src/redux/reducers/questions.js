@@ -38,8 +38,8 @@ const reducer = (state=initialState, action) => {
         ...state,
         list: [...state.list, action.payload]
       }
-      default:
-        return state
+    default:
+      return state
   }
 }
 
