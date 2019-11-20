@@ -5,15 +5,9 @@ export const addUsers = () => {
     type: ADD_USER,
     payload: {
       id: Date.now(), 
-      user: 1,  
-      gameType: 1, 
-      name: document.getElementById('questionToMake').value,
-      firstAnswer: document.getElementById('questionFirstAnswer').value,
-      secondAnswer: document.getElementById('questionSecondtAnswer').value,
-      thirdAnswer: document.getElementById('questionThirdAnswer').value,
-      firstQuantity: 0,
-      secondQuantity: 0,
-      thirdQuantity: 0
+      name: document.getElementById('inputName').value,
+      email: document.getElementById('inputCreateAccount').value,
+      password: document.getElementById('inputPassword').value
     }
   }
 }
