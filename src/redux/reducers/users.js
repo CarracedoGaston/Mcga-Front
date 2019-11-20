@@ -1,3 +1,5 @@
+import { ADD_USER } from "../actions/users"
+
 const initialState = {
   isLoading: false,
   error: '',
@@ -9,7 +11,12 @@ const initialState = {
 }
 
 const reducer = (state=initialState, action) => {
-  switch(action.type) { 
+  switch(action.type) {
+    case ADD_USER:
+      return {
+        ...state,
+        list: [...state.list, action.payload]
+      }
     default:
       return state
   }
