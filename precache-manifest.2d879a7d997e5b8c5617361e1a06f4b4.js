@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2928b17f3cea9dd25a815327f4cf0d7f",
+    "revision": "553b9e3952a056053720c275cb6fd186",
     "url": "/Mcga-Front/index.html"
   },
   {
-    "revision": "1b5c6d9c66641244fc7a",
-    "url": "/Mcga-Front/static/css/main.202a75e6.chunk.css"
+    "revision": "c54bc0067f2976f689fc",
+    "url": "/Mcga-Front/static/css/main.d3f2f220.chunk.css"
   },
   {
-    "revision": "36600a92a929489aba60",
-    "url": "/Mcga-Front/static/js/2.5c86b88c.chunk.js"
+    "revision": "6460837e4449dc6e9af2",
+    "url": "/Mcga-Front/static/js/2.b25767dc.chunk.js"
   },
   {
-    "revision": "1b5c6d9c66641244fc7a",
-    "url": "/Mcga-Front/static/js/main.64192e42.chunk.js"
+    "revision": "c54bc0067f2976f689fc",
+    "url": "/Mcga-Front/static/js/main.fc24686b.chunk.js"
   },
   {
     "revision": "33dfdfd1405bfe569d3f",
