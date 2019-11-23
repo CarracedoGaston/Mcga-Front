@@ -1,34 +1,9 @@
-import { ADD_QUESTION } from "../actions/questions"
+import { ADD_QUESTION, LOAD_QUESTIONS } from "../actions/questions"
 
 const initialState = {
   isLoading: false,
   error: '',
-  list: [
-    {
-      id: Math.random(), 
-      user: 1,  
-      gameType: 1, 
-      title:'What is your favorite sport',
-      firstAnswer: 'tennis',
-      secondAnswer: 'volleyball',
-      thirdAnswer: 'basketball',
-      firstQuantity: 0,
-      secondQuantity: 0,
-      thirdQuantity: 0
-    },
-    {
-      id: Math.random(), 
-      user: 1,  
-      gameType: 1, 
-      title:'What is your favorite food',
-      firstAnswer: 'pizza',
-      secondAnswer: 'pasta',
-      thirdAnswer: 'meat',
-      firstQuantity: 1,
-      secondQuantity: 0,
-      thirdQuantity: 3
-    }
-  ]
+  list: []
 }
 
 const reducer = (state=initialState, action) => {
@@ -37,6 +12,11 @@ const reducer = (state=initialState, action) => {
       return {
         ...state,
         list: [...state.list, action.payload]
+      }
+    case LOAD_QUESTIONS:
+      return {
+        ...state,
+        list: action.payload
       }
     default:
       return state

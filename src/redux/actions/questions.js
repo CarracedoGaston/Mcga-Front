@@ -1,12 +1,10 @@
 export const ADD_QUESTION = 'mcga/ADD_QUESTION'
+export const LOAD_QUESTIONS = 'mcga/LOAD_QUESTIONS'
 
 export const addQuestions = () => {
   return {
     type: ADD_QUESTION,
     payload: {
-      id: Date.now(), 
-      user: 1,  
-      gameType: 1, 
       title: document.getElementById('questionToMake').value,
       firstAnswer: document.getElementById('questionFirstAnswer').value,
       secondAnswer: document.getElementById('questionSecondtAnswer').value,
@@ -15,5 +13,12 @@ export const addQuestions = () => {
       secondQuantity: 0,
       thirdQuantity: 0
     }
+  }
+}
+
+export const loadQuestions = questions => {
+  return {
+    type: LOAD_QUESTIONS,
+    payload: questions
   }
 }
