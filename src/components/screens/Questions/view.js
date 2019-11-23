@@ -22,7 +22,6 @@ class Questions extends Component {
       return
     } 
   }
-
   render() {
     return (
       <MainLayout>
