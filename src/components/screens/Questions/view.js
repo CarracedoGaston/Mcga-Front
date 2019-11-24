@@ -4,6 +4,7 @@ import MainLayout from '../../layouts/MainLayout'
 import postApi from '../../../helpers/fetchPost'
 
 class Questions extends Component {
+
   add = () => {
     if (
       document.getElementById('questionToMake').value !== "" &&
@@ -32,6 +33,7 @@ class Questions extends Component {
       return
     } 
   }
+  
   render() {
     return (
       <MainLayout>

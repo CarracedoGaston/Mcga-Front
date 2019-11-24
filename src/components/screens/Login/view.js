@@ -1,12 +1,9 @@
 import './style.css'
 import React, { Component } from 'react'
 import MainLayout from '../../layouts/MainLayout'
+import postApi from '../../../helpers/fetchPost'
 
 class Login extends Component {
-  constructor(props) {
-    super(props)
-    this.createAccount = this.createAccount.bind(this)
-  }
 
   createAccount() {
     document.getElementById('inputCreateAccount').style.display = 'flex'
@@ -21,11 +18,19 @@ class Login extends Component {
       document.getElementById('inputPassword').value !== "" &&
       document.getElementById('inputCreateAccount').value !== ""
     ){
-      this.props.addUsers()
+      postApi({
+        name: document.getElementById('inputName').value,
+        email: document.getElementById('inputCreateAccount').value,
+        password: document.getElementById('inputPassword').value
+        }, 'user')
       window.alert('User Saved')
       document.getElementById('inputName').value = ""
       document.getElementById('inputPassword').value = ""
       document.getElementById('inputCreateAccount').value = ""
+      document.getElementById('inputCreateAccount').style.display = 'none'
+      document.getElementById('createAccount').style.display = 'flex'
+      document.getElementById('buttonLogin').style.display = 'flex'
+      document.getElementById('buttonSave').style.display = 'none'
     }
     else {
       window.alert('Complete all the data')
