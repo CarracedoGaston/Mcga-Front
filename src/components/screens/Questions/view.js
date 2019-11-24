@@ -10,10 +10,10 @@ class Questions extends Component {
       document.getElementById('questionFirstAnswer').value !== "" &&
       document.getElementById('questionSecondtAnswer').value !== "" &&
       document.getElementById('questionThirdAnswer').value !== ""
-    ){
+    ){ 
       postApi({
         title: document.getElementById('questionToMake').value,
-        user: '5dc215cc5461de431893ea66',
+        user: '5dc215cc5461de431893ea66', //user need to be changed
         firstAnswer: document.getElementById('questionFirstAnswer').value,
         secondAnswer: document.getElementById('questionSecondtAnswer').value,
         thirdAnswer: document.getElementById('questionThirdAnswer').value,

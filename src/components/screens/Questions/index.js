@@ -1,6 +1,4 @@
 import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
-import { addQuestions } from './../../../redux/actions/questions'
 import Questions from './view'
 
 const mapStateToProps = (state, ownProps) => {
@@ -10,11 +8,4 @@ const mapStateToProps = (state, ownProps) => {
   }
 }
 
-const mapDispatchToProps = dispatch => {
-  return bindActionCreators(
-    { addQuestions },
-    dispatch
-  )
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Questions)
+export default connect(mapStateToProps)(Questions)
