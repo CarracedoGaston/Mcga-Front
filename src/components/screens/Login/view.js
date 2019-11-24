@@ -2,7 +2,7 @@ import './style.css'
 import React, { Component } from 'react'
 import MainLayout from '../../layouts/MainLayout'
 import postApi from '../../../helpers/post'
-import signIn from '../../../helpers/sigIn'
+import signIn from '../../../helpers/signIn'
 
 class Login extends Component {
 
@@ -17,7 +17,7 @@ class Login extends Component {
     signIn({
       name: document.getElementById('inputName').value,
       password: document.getElementById('inputPassword').value
-    }, 'sigIn').then(data => console.log(data))
+    }, 'signIn').then(data => console.log(data))
   }
 
   add = () => {
