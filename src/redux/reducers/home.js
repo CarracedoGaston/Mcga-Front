@@ -13,7 +13,6 @@ const reducer = (state=initialState, action) => {
         ...state,
         position: state.position + 1
       }     
-
     default:
       return state
   }

@@ -1,4 +1,4 @@
-import { ADD_QUESTION, LOAD_QUESTIONS } from "../actions/questions"
+import { LOAD_QUESTIONS } from "../actions/questions"
 
 const initialState = {
   isLoading: false,
@@ -8,11 +8,6 @@ const initialState = {
 
 const reducer = (state=initialState, action) => {
   switch(action.type) {
-    case ADD_QUESTION:
-      return {
-        ...state,
-        list: [...state.list, action.payload]
-      }
     case LOAD_QUESTIONS:
       return {
         ...state,

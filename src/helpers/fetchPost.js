@@ -1,5 +1,5 @@
-const postApi = data => {
-  fetch('http://localhost:5000/api/question', {
+const postApi = (data, url) => {
+  fetch('http://localhost:5000/api/'+url, {
     method: 'POST',
     headers: {"Accept": 'application/json',
               "Content-Type": "application/json"},

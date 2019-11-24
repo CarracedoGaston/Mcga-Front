@@ -1,22 +1,11 @@
-import { ADD_USER } from "../actions/users"
-
 const initialState = {
   isLoading: false,
   error: '',
-  list: [ 
-    {name: 'La china',email: 'mejorprofe@gmail.com'},
-    {name: 'juan',email: 'juancho@gmail.com'},
-    {name: 'mariana',email: 'mariana@gmail.com'},        
-  ]
+  list: [ ]
 }
 
 const reducer = (state=initialState, action) => {
-  switch(action.type) {
-    case ADD_USER:
-      return {
-        ...state,
-        list: [...state.list, action.payload]
-      }
+  switch(action.type) { 
     default:
       return state
   }
