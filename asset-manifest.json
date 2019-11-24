@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Mcga-Front/static/css/main.d3f2f220.chunk.css",
-    "main.js": "/Mcga-Front/static/js/main.fc24686b.chunk.js",
-    "main.js.map": "/Mcga-Front/static/js/main.fc24686b.chunk.js.map",
+    "main.css": "/Mcga-Front/static/css/main.68816e61.chunk.css",
+    "main.js": "/Mcga-Front/static/js/main.db87659b.chunk.js",
+    "main.js.map": "/Mcga-Front/static/js/main.db87659b.chunk.js.map",
     "runtime-main.js": "/Mcga-Front/static/js/runtime-main.1051c397.js",
     "runtime-main.js.map": "/Mcga-Front/static/js/runtime-main.1051c397.js.map",
-    "static/js/2.b25767dc.chunk.js": "/Mcga-Front/static/js/2.b25767dc.chunk.js",
-    "static/js/2.b25767dc.chunk.js.map": "/Mcga-Front/static/js/2.b25767dc.chunk.js.map",
+    "static/js/2.41b5ff18.chunk.js": "/Mcga-Front/static/js/2.41b5ff18.chunk.js",
+    "static/js/2.41b5ff18.chunk.js.map": "/Mcga-Front/static/js/2.41b5ff18.chunk.js.map",
     "index.html": "/Mcga-Front/index.html",
-    "precache-manifest.2d879a7d997e5b8c5617361e1a06f4b4.js": "/Mcga-Front/precache-manifest.2d879a7d997e5b8c5617361e1a06f4b4.js",
+    "precache-manifest.7be5aa9b3ee6f570738d7064daa249d4.js": "/Mcga-Front/precache-manifest.7be5aa9b3ee6f570738d7064daa249d4.js",
     "service-worker.js": "/Mcga-Front/service-worker.js",
-    "static/css/main.d3f2f220.chunk.css.map": "/Mcga-Front/static/css/main.d3f2f220.chunk.css.map",
+    "static/css/main.68816e61.chunk.css.map": "/Mcga-Front/static/css/main.68816e61.chunk.css.map",
     "static/media/style.css": "/Mcga-Front/static/media/Stats.16cfa9ec.png"
   },
   "entrypoints": [
     "static/js/runtime-main.1051c397.js",
-    "static/js/2.b25767dc.chunk.js",
-    "static/css/main.d3f2f220.chunk.css",
-    "static/js/main.fc24686b.chunk.js"
+    "static/js/2.41b5ff18.chunk.js",
+    "static/css/main.68816e61.chunk.css",
+    "static/js/main.db87659b.chunk.js"
   ]
 }
