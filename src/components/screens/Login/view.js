@@ -1,7 +1,8 @@
 import './style.css'
 import React, { Component } from 'react'
 import MainLayout from '../../layouts/MainLayout'
-import postApi from '../../../helpers/fetchPost'
+import postApi from '../../../helpers/post'
+import signIn from '../../../helpers/sigIn'
 
 class Login extends Component {
 
@@ -12,6 +13,13 @@ class Login extends Component {
     document.getElementById('buttonSave').style.display = 'flex'
   }
   
+  loginAccount = () => {
+    signIn({
+      name: document.getElementById('inputName').value,
+      password: document.getElementById('inputPassword').value
+    }, 'sigIn').then(data => console.log(data))
+  }
+
   add = () => {
     if (
       document.getElementById('inputName').value !== "" &&
@@ -49,7 +57,7 @@ class Login extends Component {
           </div>
           <div id="buttonsLoginContainer">
             <div id="createAccount" onClick={this.createAccount}>Create Account</div>
-            <button id="buttonLogin" className="buttonLogin">Log In</button>
+            <button id="buttonLogin" className="buttonLogin" onClick={this.loginAccount}>Log In</button>
             <button id="buttonSave" className="buttonLogin" onClick={this.add}>Save</button>
           </div>
         </div>
