@@ -16,11 +16,11 @@ class Questions extends Component {
         user: '5dc215cc5461de431893ea66',
         firstAnswer: document.getElementById('questionFirstAnswer').value,
         secondAnswer: document.getElementById('questionSecondtAnswer').value,
-        thirdAnswer: document.getElementById('questionSecondtAnswer').value,
+        thirdAnswer: document.getElementById('questionThirdAnswer').value,
         firstQuantity: '0',
         secondQuantity: '0',
         thirdQuantity: '0'
-        })
+        }, 'question')
       window.alert('Question Saved')
       document.getElementById('questionToMake').value = ""
       document.getElementById('questionFirstAnswer').value = ""
