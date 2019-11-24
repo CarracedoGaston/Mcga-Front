@@ -11,13 +11,12 @@ class Questions extends Component {
       document.getElementById('questionSecondtAnswer').value !== "" &&
       document.getElementById('questionThirdAnswer').value !== ""
     ){
-      // this.props.addQuestions()
       postApi({
-        title: 'test',
+        title: document.getElementById('questionToMake').value,
         user: '5dc215cc5461de431893ea66',
-        firstAnswer: 'first',
-        secondAnswer: 'second',
-        thirdAnswer: 'third',
+        firstAnswer: document.getElementById('questionFirstAnswer').value,
+        secondAnswer: document.getElementById('questionSecondtAnswer').value,
+        thirdAnswer: document.getElementById('questionSecondtAnswer').value,
         firstQuantity: '0',
         secondQuantity: '0',
         thirdQuantity: '0'
@@ -46,7 +45,6 @@ class Questions extends Component {
           <div id="buttonNewQuestion">
             <button className="buttonQuestion" onClick={this.add}>Save Question</button>
           </div>
-           { console.log(this.props.questions )}
         </div>
       </MainLayout>
     )
