@@ -5,33 +5,33 @@ import postApi from '../../../helpers/fetchPost'
 
 class Questions extends Component {
   add = () => {
-    postApi({
-      title: 'test',
-      user: '5dc215cc5461de431893ea66',
-      firstAnswer: 'first',
-      secondAnswer: 'second',
-      thirdAnswer: 'third',
-      firstQuantity: '0',
-      secondQuantity: '0',
-      thirdQuantity: '0'
-      })
-    // if (
-    //   document.getElementById('questionToMake').value !== "" &&
-    //   document.getElementById('questionFirstAnswer').value !== "" &&
-    //   document.getElementById('questionSecondtAnswer').value !== "" &&
-    //   document.getElementById('questionThirdAnswer').value !== ""
-    // ){
-    //   this.props.addQuestions()
-    //   window.alert('Question Saved')
-    //   document.getElementById('questionToMake').value = ""
-    //   document.getElementById('questionFirstAnswer').value = ""
-    //   document.getElementById('questionSecondtAnswer').value = ""
-    //   document.getElementById('questionThirdAnswer').value = ""
-    // }
-    // else {
-    //   window.alert('Complete all the data')
-    //   return
-    // } 
+    if (
+      document.getElementById('questionToMake').value !== "" &&
+      document.getElementById('questionFirstAnswer').value !== "" &&
+      document.getElementById('questionSecondtAnswer').value !== "" &&
+      document.getElementById('questionThirdAnswer').value !== ""
+    ){
+      // this.props.addQuestions()
+      postApi({
+        title: 'test',
+        user: '5dc215cc5461de431893ea66',
+        firstAnswer: 'first',
+        secondAnswer: 'second',
+        thirdAnswer: 'third',
+        firstQuantity: '0',
+        secondQuantity: '0',
+        thirdQuantity: '0'
+        })
+      window.alert('Question Saved')
+      document.getElementById('questionToMake').value = ""
+      document.getElementById('questionFirstAnswer').value = ""
+      document.getElementById('questionSecondtAnswer').value = ""
+      document.getElementById('questionThirdAnswer').value = ""
+    }
+    else {
+      window.alert('Complete all the data')
+      return
+    } 
   }
   render() {
     return (
