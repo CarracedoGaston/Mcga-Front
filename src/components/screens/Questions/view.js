@@ -1,7 +1,7 @@
 import './style.css'
 import React, { Component } from 'react'
 import MainLayout from '../../layouts/MainLayout'
-import postApi from '../../../helpers/fetchPost'
+import postApi from '../../../helpers/post'
 
 class Questions extends Component {
 
