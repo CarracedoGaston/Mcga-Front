@@ -1,24 +1,24 @@
-import './style.css'
-import React, { Component } from 'react'
-import MainLayout from '../../layouts/MainLayout'
+import { connect } from 'react-redux'
+import { bindActionCreators } from 'redux'
+import { loadQuestions } from './../../../redux/actions/questions'
+import { loadStatics } from './../../../redux/actions/statics'
+import Statics from './view'
 
-class Statics extends Component {
-  render() {
-    return (
-      <MainLayout>
-        <div className="Container">
-          <div id="selectStatic">      
-            <div className="staticQuestion">Which sport do you prefer?</div>
-            <div className="staticQuestion">What type of person you are?</div>
-            <div className="staticQuestion">How old are you?</div>
-            <div className="staticQuestion">Which color do you prefer?</div>
-            <div className="staticQuestion">What is your sex?</div>
-          </div>
-          <div id="staticsImgExamp"></div>
-        </div>
-      </MainLayout>
-    )
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    questions: state.questions.list,
+    position: state.statics.position,
+    isLoading: state.questions.isLoading,
+    error: state.questions.error
   }
 }
 
-export default Statics
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators(
+    { loadQuestions, loadStatics }, 
+    dispatch
+  )
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Statics)
