@@ -24,7 +24,7 @@ class Statics extends Component {
   renderList = () => {
     return this.props.questions.map( question => {
       return (
-        <li key={ question._id }>
+        <li key={ question._id } className="staticQuestion">
           <button value = {question._id} onClick={this.showElement}>{question.title}</button>
         </li>
       )
@@ -36,18 +36,18 @@ class Statics extends Component {
       <MainLayout>
         <div className="Container">
           <div id="selectStatic">  
-            <ul>
+            <ul id="staticQuestionContainer">
               { this.renderList() }
             </ul>
           </div>    
           {this.state.question !== null 
           ?    
-          <>
-          <div>{this.state.question.title} </div>
-          <div>{this.state.question.firstAnswer}: {this.state.question.firstQuantity} </div>
-          <div>{this.state.question.secondAnswer}: {this.state.question.secondQuantity} </div>
-          <div>{this.state.question.thirdAnswer}: {this.state.question.thirdQuantity} </div>
-          </>
+          <div id="staticGraph">
+            <div className="staticQuestionAnswer"> {this.state.question.title} </div>
+            <div className="staticQuestionAnswer"> {this.state.question.firstAnswer}: {this.state.question.firstQuantity} </div>
+            <div className="staticQuestionAnswer"> {this.state.question.secondAnswer}: {this.state.question.secondQuantity} </div>
+            <div className="staticQuestionAnswer"> {this.state.question.thirdAnswer}: {this.state.question.thirdQuantity} </div>
+          </div>
           :
           <div>Nothing to see</div>}
         </div>
