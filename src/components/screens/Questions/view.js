@@ -1,7 +1,7 @@
 import './style.css'
 import React, { Component } from 'react'
 import MainLayout from '../../layouts/MainLayout'
-import postApi from '../../../helpers/post'
+import { fetchPost } from '../../../helpers/fetch'
 
 class Questions extends Component {
 
@@ -12,16 +12,17 @@ class Questions extends Component {
       document.getElementById('questionSecondtAnswer').value !== "" &&
       document.getElementById('questionThirdAnswer').value !== ""
     ){ 
-      postApi({
+      fetchPost('question/', {
         title: document.getElementById('questionToMake').value,
-        user: '5dc215cc5461de431893ea66', //user need to be changed
+        user: '5dc215cc5461de431893ea66', 
         firstAnswer: document.getElementById('questionFirstAnswer').value,
         secondAnswer: document.getElementById('questionSecondtAnswer').value,
         thirdAnswer: document.getElementById('questionThirdAnswer').value,
         firstQuantity: '0',
         secondQuantity: '0',
         thirdQuantity: '0'
-        }, 'question')
+        }).then(data => console.log(data))
+        //   .catch(err => this.props.setError(err))
       window.alert('Question Saved')
       document.getElementById('questionToMake').value = ""
       document.getElementById('questionFirstAnswer').value = ""
@@ -33,7 +34,7 @@ class Questions extends Component {
       return
     } 
   }
-  
+
   render() {
     return (
       <MainLayout>
@@ -47,7 +48,7 @@ class Questions extends Component {
           <div id="buttonNewQuestion">
             <button className="buttonQuestion" onClick={this.add}>Save Question</button>
           </div>
-        </div>
+        </div> 
       </MainLayout>
     )
   }

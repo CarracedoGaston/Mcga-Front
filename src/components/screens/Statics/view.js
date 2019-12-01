@@ -1,7 +1,7 @@
 import './style.css'
 import React, { Component } from 'react'
 import MainLayout from '../../layouts/MainLayout'
-import fetchApi from '../../../helpers/fetch'
+import { fetchApi } from '../../../helpers/fetch'
 
 class Statics extends Component {
   constructor(props) {
@@ -13,8 +13,9 @@ class Statics extends Component {
   }
 
   componentDidMount(){
-    fetchApi('/question')
+    fetchApi('question/')
         .then(data => this.props.loadQuestions(data))
+        // .catch(err => this.props.setError(err))
   }
 
   showElement = (event) => {

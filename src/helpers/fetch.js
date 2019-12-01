@@ -1,7 +1,8 @@
 export const fetchApi = (url, method='GET', body=null, _headers={}) => {
-    const fullURL = 'http://localhost:5000/api'+url
+    const fullURL = 'http://localhost:5000/api/'+url
     const headers = {
         'Content-Type': 'application/json',
+        'Accept': 'application/json',
         ..._headers
     }
     const params = { method, headers }

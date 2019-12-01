@@ -41,6 +41,10 @@ class MainLayout extends Component {
         this.setState({colorHeader: 'rgb(231, 56, 223)'})
         this.setState({backgroundApp: 'rgb(243, 192, 247)'})
         break
+      case 'logout':
+        this.setState({colorHeader: 'rgb(231, 56, 223)'})
+        this.setState({backgroundApp: 'rgb(243, 192, 247)'})
+        break
       case 'questions':
         this.setState({colorHeader: 'rgb(44, 188, 207)'})
         this.setState({backgroundApp: 'rgb(192, 247, 243)'})
@@ -58,6 +62,7 @@ class MainLayout extends Component {
 
   render() {
     return (
+      
       <div id="MainLayout">
         <div id="header" className='color' style={{color: this.state.colorHeader}}>
           {window.location.pathname.split('/')}  
@@ -71,9 +76,17 @@ class MainLayout extends Component {
               <Link to="/home"><li className="link">
                 <div id="homeImg" className="imgsMenu"></div>Home</li>
               </Link>
-              <Link to="/login"><li className="link">
+              {
+              localStorage.getItem('token')===null
+              ?
+              (<Link to="/login"><li className="link">
                 <div id="loginImg" className="imgsMenu"></div>Login</li>
-              </Link>
+              </Link>)
+              :
+               (<Link to="/logout"><li className="link">
+                <div id="loginImg" className="imgsMenu"></div>Login</li>
+              </Link>)
+              }
             </div>
             <div id="privateSection">
               <Link to="/questions"><li className="link">

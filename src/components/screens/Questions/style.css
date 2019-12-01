@@ -14,14 +14,12 @@
 }
 
 #questionToMake {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 80%;
   height: 40%;
   border: 2px solid rgb(59, 136, 131);
   background-color: white;
   border-radius: 15px;
+  font-size: 150%;
 }
 
 .inputAnswer {
@@ -34,6 +32,11 @@
   border: 2px solid rgb(59, 136, 131);
   background-color: white;
   border-radius: 25px;
+}
+
+.inputAnswerField {
+  height: 80%;
+  width: 80%;
 }
 
 #buttonNewQuestion {

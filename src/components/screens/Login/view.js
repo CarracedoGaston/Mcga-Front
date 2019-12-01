@@ -1,8 +1,7 @@
 import './style.css'
 import React, { Component } from 'react'
 import MainLayout from '../../layouts/MainLayout'
-import postApi from '../../../helpers/post'
-import signIn from '../../../helpers/signIn'
+import { fetchPost } from '../../../helpers/fetch'
 
 class Login extends Component {
 
@@ -14,23 +13,31 @@ class Login extends Component {
   }
   
   loginAccount = () => {
-    signIn({
+    const myStorage = window.localStorage
+    fetchPost('user/signIn/', {
       name: document.getElementById('inputName').value,
       password: document.getElementById('inputPassword').value
-    }, 'signIn').then(data => console.log(data))
+    })
+      .then( data => myStorage.setItem('token', JSON.stringify(data['password'])))
+    window.location = "/home"
   }
+ 
 
   add = () => {
+    
     if (
       document.getElementById('inputName').value !== "" &&
       document.getElementById('inputPassword').value !== "" &&
       document.getElementById('inputCreateAccount').value !== ""
     ){
-      postApi({
+      fetchPost('user/', {
         name: document.getElementById('inputName').value,
         email: document.getElementById('inputCreateAccount').value,
         password: document.getElementById('inputPassword').value
-        }, 'user')
+        })
+        // .then(data => this.props.loadProducts(data))
+        //   .catch(err => this.props.setError(err))
+
       window.alert('User Saved')
       document.getElementById('inputName').value = ""
       document.getElementById('inputPassword').value = ""
@@ -47,6 +54,7 @@ class Login extends Component {
   }
 
   render() {
+        
     return (
       <MainLayout>
         <div className="Container">
