@@ -15,14 +15,19 @@ class Routes extends Component {
   render() {
     return (
       <BrowserRouter>
+        {localStorage.getItem('token')===null?
         <Switch>
           <Route exact path="/home" component={Home} />
           <Route exact path="/login" component={Login} />
-           <Route exact path="/logout" component={Logout} />
+          <Redirect from="/" to="/login" />
+        </Switch>:
+        <Switch>
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/login" component={Logout} />
           <Route exact path="/questions" component={Questions} />
           <Route exact path="/statics" component={Statics} />
           <Redirect from="/" to="/home" />
-        </Switch>
+        </Switch>}
       </BrowserRouter>
     )
   }
