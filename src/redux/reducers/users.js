@@ -1,7 +1,7 @@
 const initialState = {
   isLoading: false,
   error: '',
-  list: [ ]
+  user: {}
 }
 
 const reducer = (state=initialState, action) => {

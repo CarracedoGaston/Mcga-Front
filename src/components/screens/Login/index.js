@@ -1,4 +1,5 @@
 import { connect } from 'react-redux'
+// import { bindActionCreators } from 'redux'
 import Login from './view'
 
 const mapStateToProps = (state, ownProps) => {

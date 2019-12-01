@@ -8,7 +8,7 @@ const mapStateToProps = (state, ownProps) => {
   return {
     questions: state.questions.list,
     position: state.home.position,
-    isLoading: state.questions.isLoading  
+    isLoading: state.questions.isLoading
   }
 }
 

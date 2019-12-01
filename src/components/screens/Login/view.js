@@ -14,8 +14,8 @@ class Login extends Component {
   
   move = (data) => {
     const myStorage = window.localStorage
-    myStorage.setItem('token', JSON.stringify(data['name']))
-     window.location = "/home"
+    myStorage.setItem('token', JSON.stringify(data['_id']))
+    window.location = "/home"
   }
 
   loginAccount = () => {
