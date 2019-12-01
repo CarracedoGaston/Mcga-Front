@@ -12,6 +12,9 @@ class Login extends Component {
     document.getElementById('buttonSave').style.display = 'flex'
   }
   
+  move = () => {
+     window.location = "/home"
+  }
   loginAccount = () => {
     const myStorage = window.localStorage
     fetchPost('user/signIn/', {
@@ -19,7 +22,7 @@ class Login extends Component {
       password: document.getElementById('inputPassword').value
     })
       .then( data => myStorage.setItem('token', JSON.stringify(data['password'])))
-    window.location = "/home"
+      .then(this.move)
   }
  
 
