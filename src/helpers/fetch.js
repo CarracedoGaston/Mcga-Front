@@ -11,7 +11,7 @@ export const fetchApi = (url, method='GET', body=null, _headers={}) => {
     // if token add fullHeaders.token = 'Authorization ${token}'
     return fetch(fullURL, params)
       .then(res => res.json())
-      .catch(error => console.error('Error:', error))
+    //   .catch(error => console.error('Error:', error))
 }
 
 export const fetchPost = (url, body, headers) => {

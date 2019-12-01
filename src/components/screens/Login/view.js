@@ -12,20 +12,22 @@ class Login extends Component {
     document.getElementById('buttonSave').style.display = 'flex'
   }
   
-  move = () => {
+  move = (data) => {
+    const myStorage = window.localStorage
+    myStorage.setItem('token', JSON.stringify(data['name']))
      window.location = "/home"
   }
+
   loginAccount = () => {
-    const myStorage = window.localStorage
+
     fetchPost('user/signIn/', {
       name: document.getElementById('inputName').value,
       password: document.getElementById('inputPassword').value
     })
-      .then( data => myStorage.setItem('token', JSON.stringify(data['password'])))
-      .then(this.move)
+      .then( data => data['name']? this.move(data)
+      : console.log('wtfff'))   
   }
  
-
   add = () => {
     
     if (
