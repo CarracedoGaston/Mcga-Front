@@ -12,6 +12,9 @@ class Questions extends Component {
       document.getElementById('questionSecondtAnswer').value !== "" &&
       document.getElementById('questionThirdAnswer').value !== ""
     ){ 
+      const headers = {
+        'authorization': `Bearer ${localStorage.token}`
+    }
       fetchPost('question/', {
         title: document.getElementById('questionToMake').value,
         user: '5dc215cc5461de431893ea66', 
@@ -21,7 +24,7 @@ class Questions extends Component {
         firstQuantity: '0',
         secondQuantity: '0',
         thirdQuantity: '0'
-        }).then(data => console.log(data))
+        }, headers).then(data => console.log(data))
         //   .catch(err => this.props.setError(err))
       window.alert('Question Saved')
       document.getElementById('questionToMake').value = ""
