@@ -17,7 +17,7 @@ class Questions extends Component {
     }
       fetchPost('question/', {
         title: document.getElementById('questionToMake').value,
-        user: '5dc215cc5461de431893ea66', 
+        user: localStorage.user, 
         firstAnswer: document.getElementById('questionFirstAnswer').value,
         secondAnswer: document.getElementById('questionSecondtAnswer').value,
         thirdAnswer: document.getElementById('questionThirdAnswer').value,

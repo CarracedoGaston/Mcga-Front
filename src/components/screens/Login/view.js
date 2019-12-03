@@ -30,7 +30,7 @@ class Login extends Component {
     })
    // .catch((err => this.props.setError(err)))
     .catch((err => console.log(err)))
-    //window.location = "/home"
+    window.location = "/home"
   }
  
   add = () => {
