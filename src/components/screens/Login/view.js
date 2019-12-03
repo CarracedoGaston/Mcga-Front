@@ -19,15 +19,18 @@ class Login extends Component {
   }
 
   loginAccount = () => {
-
     fetchPost('user/signIn/', {
       name: document.getElementById('inputName').value,
       password: document.getElementById('inputPassword').value
     })
-    .then(data  => localStorage.setItem('token', data.token))
+    //.then(data  => console.log(data))
+    .then(data  => {
+      localStorage.setItem('token', data.token)
+      localStorage.setItem('user', data.user)
+    })
    // .catch((err => this.props.setError(err)))
     .catch((err => console.log(err)))
-    window.location = "/home"
+    //window.location = "/home"
   }
  
   add = () => {
