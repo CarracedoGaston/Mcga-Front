@@ -24,8 +24,11 @@ class Login extends Component {
       name: document.getElementById('inputName').value,
       password: document.getElementById('inputPassword').value
     })
-      .then( data => data['name']? this.move(data)
-      : console.log('wtfff'))   
+    //.then( res => res.JSON())
+    .then(data  => localStorage.setItem('token', data.token))
+   // .catch((err => this.props.setError(err)))
+    .catch((err => console.log(err)))
+    window.location = "/home"
   }
  
   add = () => {

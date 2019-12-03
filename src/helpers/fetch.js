@@ -5,7 +5,8 @@ export const fetchApi = (url, method='GET', body=null, _headers={}) => {
         'Accept': 'application/json',
         ..._headers
     }
-    const params = { method, headers }
+    const params = {fullURL,method, headers }
+    console.log("fetch", method, params)
     if(method !== 'GET' && body) params.body = JSON.stringify(body)
     // get token from localstorage
     // if token add fullHeaders.token = 'Authorization ${token}'
