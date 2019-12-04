@@ -47,6 +47,7 @@ class Login extends Component {
         })
         // .then(data => this.props.loadProducts(data))
         //   .catch(err => this.props.setError(err))
+        //is not necesary decode token because createacount redirect to login. so decode token is in the login form
 
       window.alert('User Saved')
       document.getElementById('inputName').value = ""
