@@ -19,12 +19,15 @@ class Login extends Component {
   }
 
   loginAccount = () => {
-
     fetchPost('user/signIn/', {
       name: document.getElementById('inputName').value,
       password: document.getElementById('inputPassword').value
     })
-    .then(data  => localStorage.setItem('token', data.token))
+    //.then(data  => console.log(data))
+    .then(data  => {
+      localStorage.setItem('token', data.token)
+      localStorage.setItem('user', data.user)
+    })
    // .catch((err => this.props.setError(err)))
     .catch((err => console.log(err)))
     window.location = "/home"
@@ -44,6 +47,7 @@ class Login extends Component {
         })
         // .then(data => this.props.loadProducts(data))
         //   .catch(err => this.props.setError(err))
+        //is not necesary decode token because createacount redirect to login. so decode token is in the login form
 
       window.alert('User Saved')
       document.getElementById('inputName').value = ""

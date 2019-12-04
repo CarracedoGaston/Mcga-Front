@@ -12,10 +12,10 @@ class Statics extends Component {
     this.showElement = this.showElement.bind(this)
   }
 
-  componentDidMount(){
-    fetchApi('question/')
-        .then(data => this.props.loadQuestions(data))
-        // .catch(err => this.props.setError(err))
+  componentDidMount(){    
+    fetchApi(`question/user/${localStorage.user}`)    
+    .then(data => this.props.loadQuestions(data))
+    // .catch(err => this.props.setError(err))
   }
 
   showElement = (event) => {
