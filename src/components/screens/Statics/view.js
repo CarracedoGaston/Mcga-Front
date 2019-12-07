@@ -19,7 +19,13 @@ class Statics extends Component {
   }
 
   showElement = (event) => {
-    this.setState({question: this.props.questions.find(question => question._id === event.target.value)})
+    const result =this.props.questions.find(question => question._id === event.target.value)
+    this.setState({question: result})
+    this.props.loadQuestionById(result)
+    console.log("state ", this.state)
+    console.log("props ", this.props)
+
+
   }
 
   renderList = () => {
