@@ -21,18 +21,20 @@ class Statics extends Component {
   showElement = (event) => {
     const result =this.props.questions.find(question => question._id === event.target.value)
     this.setState({question: result})
-    this.props.loadQuestionById(result)
-    console.log("state ", this.state)
-    console.log("props ", this.props)
+    const path = `/QuestionAbm/${result._id}`
+    this.props.history.push(path);
+    //this.props.history.push()
 
-
+    //this.setState({question: result})
+    //this.props.loadQuestionById(result)
+    //window.location = `/QuestionAbm/${result._id}`
   }
 
   renderList = () => {
     return this.props.questions.map( question => {
       return (
         <li key={ question._id } className="staticQuestion">
-          <button value = {question._id} onClick={this.showElement}>{question.title}</button>
+          <button value = {question._id}  onClick={this.showElement}>{question.title}</button>
         </li>
       )
     })
