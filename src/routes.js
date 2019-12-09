@@ -10,6 +10,7 @@ import Login from './components/screens/Login'
 import Questions from './components/screens/Questions'
 import Statics from './components/screens/Statics'
 import Logout from './components/screens/Logout'
+import QuestionAbm from './components/screens/QuestionAbm'
 
 class Routes extends Component {
   render() {
@@ -26,6 +27,7 @@ class Routes extends Component {
           <Route exact path="/login" component={Logout} />
           <Route exact path="/questions" component={Questions} />
           <Route exact path="/statics" component={Statics} />
+          <Route exact path="/QuestionAbm" component={QuestionAbm}/>
           <Redirect from="/" to="/home" />
         </Switch>}
       </BrowserRouter>

@@ -1,0 +1,47 @@
+.Container {
+    height: 100%;
+    width: 100%;
+  }
+
+  .buttonAbmQuestion{
+    width: 100%;   
+    justify-content: space-around;
+    align-items: center;     
+  }
+  
+  #newQuestion {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 65%;
+    width: 90%;
+    border-radius: 5px;
+  }
+  
+  #questionToMake {
+    width: 80%;
+    height: 40%;
+    border: 2px solid rgb(59, 136, 131);
+    background-color: white;
+    border-radius: 15px;
+    font-size: 150%;
+  }
+  
+  .inputAnswer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 10%;
+    text-align: center;
+    border: 2px solid rgb(59, 136, 131);
+    background-color: white;
+    border-radius: 25px;
+  }
+  
+  .inputAnswerField {
+    height: 80%;
+    width: 80%;
+  }
+  

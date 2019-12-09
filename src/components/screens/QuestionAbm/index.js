@@ -1,14 +1,13 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { withRouter } from 'react-router-dom'
-import { loadQuestions } from './../../../redux/actions/questions'
 import { loadQuestionById } from './../../../redux/actions/statics'
-import Statics from './view'
+import QuestionAbm from './view'
 
 
 const mapStateToProps = (state, ownProps) => {
+  console.log("maps state to prop questionabm", state)
   return {
-    questions: state.questions.list,
+    questions: state.questions.list, 
     selectedQuestion: state.statics.selectedQuestion,
     isLoading: state.questions.isLoading,
     error: state.questions.error
@@ -17,11 +16,9 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators(
-    { loadQuestions, loadQuestionById }, 
+    { loadQuestionById }, 
     dispatch
   )
 }
 
-export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(Statics)
-)
+export default connect(mapStateToProps, mapDispatchToProps)(QuestionAbm)
