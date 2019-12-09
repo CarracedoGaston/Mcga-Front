@@ -27,7 +27,7 @@ class Routes extends Component {
           <Route exact path="/login" component={Logout} />
           <Route exact path="/questions" component={Questions} />
           <Route exact path="/statics" component={Statics} />
-          <Route exact path="/QuestionAbm/:questionId" component={QuestionAbm} />
+          <Route exact path="/QuestionAbm" component={QuestionAbm}/>
           <Redirect from="/" to="/home" />
         </Switch>}
       </BrowserRouter>

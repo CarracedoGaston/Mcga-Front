@@ -3,7 +3,7 @@ import { LOAD_QUESTION_BY_ID } from "../actions/statics"
 const initialState = {
   isLoading: false,
   error: '',
-  selectedQuestion: {}
+  selectedQuestion: null
 }
 
 const reducer = (state=initialState, action) => {
