@@ -9,6 +9,7 @@ export const fetchApi = (url, method='GET', body=null, _headers={}) => {
         ..._headers
     }
     const params = {fullURL,method, headers }
+    console.log("fetch", params)
     if(method !== 'GET' && body) 
     params.body = JSON.stringify(body)
     // get token from localstorage

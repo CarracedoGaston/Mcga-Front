@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { withRouter } from 'react-router-dom'
-import { loadQuestionById, deleteQuestion, loadQuestions } from './../../../redux/actions/statics'
+import { loadQuestionById, deleteQuestion, loadQuestions, updateQuestion } from './../../../redux/actions/statics'
 import Statics from './view'
 
 
@@ -16,7 +16,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = dispatch => {
   return bindActionCreators(
-    { loadQuestions, loadQuestionById, deleteQuestion }, 
+    { loadQuestions, loadQuestionById, deleteQuestion, updateQuestion }, 
     dispatch
   )
 }

@@ -1,6 +1,7 @@
 import { LOAD_QUESTIONS } from "../actions/statics"
 import { LOAD_QUESTION_BY_ID } from "../actions/statics"
 import { DELETE_QUESTION } from "../actions/statics"
+import { UPDATE_QUESTION } from "../actions/statics"
 
 const initialState = {
   isLoading: false,
@@ -10,8 +11,6 @@ const initialState = {
 }
 
 const reducer = (state=initialState, action) => {
-  console.log("state", state)
-  console.log("action", action)
   switch(action.type) {
     case LOAD_QUESTIONS:
       return {
@@ -27,8 +26,17 @@ const reducer = (state=initialState, action) => {
         return {
           ...state,
           selectedQuestion: null,
-          questions: state.questions.filter(item => item._id !=action.payload)
+          questions: state.questions.filter(question => question._id !==action.payload)
         }  
+        case UPDATE_QUESTION:
+          console.log("payloadd", action.payload)
+          return {
+            ...state,
+            selectedQuestion: null,
+            questions: state.questions.map((question)=> 
+            question._id==action.payload._id ? 
+              action.payload : question)
+          }  
     default:
       return state
   }

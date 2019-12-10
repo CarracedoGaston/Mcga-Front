@@ -2,7 +2,7 @@ import './style.css'
 import React, { Component } from 'react'
 import MainLayout from '../../layouts/MainLayout'
 import { fetchApi } from '../../../helpers/fetch'
-import { fetchDelete, fetchPatch } from '../../../helpers/fetch'
+import { fetchDelete, fetchPut } from '../../../helpers/fetch'
 
 class Statics extends Component {
   constructor(props) {
@@ -16,7 +16,6 @@ class Statics extends Component {
   componentDidMount(){    
     fetchApi(`question/user/${localStorage.user}`)    
     .then(data => this.props.loadQuestions(data))
-    
     // .catch(err => this.props.setError(err))
   }
 
@@ -24,24 +23,38 @@ class Statics extends Component {
     if (
       document.getElementById('questionToMake').value !== "" &&
       document.getElementById('questionFirstAnswer').value !== "" &&
-      document.getElementById('questionSecondtAnswer').value !== "" &&
+      document.getElementById('questionSecondAnswer').value !== "" &&
       document.getElementById('questionThirdAnswer').value !== ""
     )
     {       
       const headers = {'authorization': `Bearer ${localStorage.token}`}
-
-      fetchPatch(`question/${this.props.selectedQuestion._id}`, {
+      const questionUpd = {
+        _id: this.props.selectedQuestion._id,
         title: document.getElementById('questionToMake').value,
         user: localStorage.user, 
         firstAnswer: document.getElementById('questionFirstAnswer').value,
-        secondAnswer: document.getElementById('questionSecondtAnswer').value,
+        secondAnswer: document.getElementById('questionSecondAnswer').value,
+        thirdAnswer: document.getElementById('questionThirdAnswer').value,
+        firstQuantity: '0',
+        secondQuantity: '0',
+        thirdQuantity: '0' 
+      }
+
+      fetchPut(`question/${this.props.selectedQuestion._id}`, {
+        questionUptitle: document.getElementById('questionToMake').value,
+        user: localStorage.user, 
+        firstAnswer: document.getElementById('questionFirstAnswer').value,
+        secondAnswer: document.getElementById('questionSecondAnswer').value,
         thirdAnswer: document.getElementById('questionThirdAnswer').value,
         firstQuantity: '0',
         secondQuantity: '0',
         thirdQuantity: '0'
-      }, headers).then(data => console.log(data))
+      }, headers) 
+      .then(this.props.updateQuestion(questionUpd))
         //   .catch(err => this.props.setError(err))
-      window.alert('Question Updated')
+
+       
+      window.alert('Question Updated')    
     }
   } 
 
@@ -73,6 +86,7 @@ class Statics extends Component {
   }
 
   render() {
+    console.log("tender ", this.props.questions)
     if (this.props.selectedQuestion!== null&&this.props.selectedQuestion!== {})
     {
       return (
@@ -82,7 +96,7 @@ class Statics extends Component {
               <input id="questionToMake" placeholder={this.props.selectedQuestion.title}/>  
               <input className="inputAnswer" id="questionFirstAnswer" placeholder={this.props.selectedQuestion.firstAnswer}/>
               <input className="inputAnswer" id="questionSecondAnswer" placeholder={this.props.selectedQuestion.secondAnswer}/>
-              <input className="inputAnswer" id="questionThirdtAnswer" placeholder={this.props.selectedQuestion.thirdAnswer}/> 
+              <input className="inputAnswer" id="questionThirdAnswer" placeholder={this.props.selectedQuestion.thirdAnswer}/> 
             </div>
             <div className="buttonAbmQuestion">
               <button className="buttonQuestionAbm" onClick={this.update}>Save</button>
