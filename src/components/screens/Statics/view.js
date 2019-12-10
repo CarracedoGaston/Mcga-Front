@@ -13,7 +13,7 @@ class Statics extends Component {
     this.showElement = this.showElement.bind(this)
   }
 
-  componentDidMount(){    
+  componentDidMount(){
     fetchApi(`question/user/${localStorage.user}`)    
     .then(data => this.props.loadQuestions(data))
     // .catch(err => this.props.setError(err))
@@ -86,7 +86,6 @@ class Statics extends Component {
   }
 
   render() {
-    console.log("tender ", this.props.questions)
     if (this.props.selectedQuestion!== null&&this.props.selectedQuestion!== {})
     {
       return (

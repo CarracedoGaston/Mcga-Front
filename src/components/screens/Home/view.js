@@ -19,7 +19,6 @@ class Home extends Component {
   render() { 
     return (
       <MainLayout>
-        {console.log(this.props.selectedQuestion)}
         <div className="Container">
           {!(this.props.position===this.props.questions.length)?
           <div id="questionPlay">

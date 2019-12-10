@@ -29,7 +29,6 @@ const reducer = (state=initialState, action) => {
           questions: state.questions.filter(question => question._id !==action.payload)
         }  
         case UPDATE_QUESTION:
-          console.log("payloadd", action.payload)
           return {
             ...state,
             selectedQuestion: null,
