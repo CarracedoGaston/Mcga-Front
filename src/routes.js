@@ -14,6 +14,8 @@ import QuestionAbm from './components/screens/QuestionAbm'
 
 class Routes extends Component {
   render() {
+    const token = localStorage.getItem("jwtToken")
+    console.log('token', token)
     return (
       <BrowserRouter>
         {localStorage.getItem('token')===null?
