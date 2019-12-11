@@ -51,11 +51,13 @@ class Statics extends Component {
         thirdQuantity: '0'
       }, headers) 
       .then(this.props.updateQuestion(questionUpd))
-        //   .catch(err => this.props.setError(err))
-
-       
+        //   .catch(err => this.props.setError(err)) 
       window.alert('Question Updated')    
     }
+    else {
+      window.alert('Complete all the data')
+      return
+    } 
   } 
 
   back = () => {
@@ -92,10 +94,10 @@ class Statics extends Component {
         <MainLayout>
           <div className="Container">
             <div id="newQuestion">
-              <input id="questionToMake" placeholder={this.props.selectedQuestion.title}/>  
-              <input className="inputAnswer" id="questionFirstAnswer" placeholder={this.props.selectedQuestion.firstAnswer}/>
-              <input className="inputAnswer" id="questionSecondAnswer" placeholder={this.props.selectedQuestion.secondAnswer}/>
-              <input className="inputAnswer" id="questionThirdAnswer" placeholder={this.props.selectedQuestion.thirdAnswer}/> 
+            <textarea id="questionToMake" defaultValue={this.props.selectedQuestion.title} readOnly={false}/>  
+              <input className="inputAnswer" id="questionFirstAnswer" defaultValue={this.props.selectedQuestion.firstAnswer}/>
+              <input className="inputAnswer" id="questionSecondAnswer" defaultValue={this.props.selectedQuestion.secondAnswer}/>
+              <input className="inputAnswer" id="questionThirdAnswer" defaultValue={this.props.selectedQuestion.thirdAnswer}/> 
             </div>
             <div className="buttonAbmQuestion">
               <button className="buttonQuestionAbm" onClick={this.update}>Save</button>
