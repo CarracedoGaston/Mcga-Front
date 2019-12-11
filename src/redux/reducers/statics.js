@@ -6,7 +6,7 @@ import { UPDATE_QUESTION } from "../actions/statics"
 const initialState = {
   isLoading: false,
   error: '',
-  questions: null,
+  questions: [],
   selectedQuestion: null
 }
 
