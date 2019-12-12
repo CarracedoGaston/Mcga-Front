@@ -13,7 +13,16 @@ import Logout from './components/screens/Logout'
 import QuestionAbm from './components/screens/QuestionAbm'
 
 class Routes extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      islogued: false
+    }
+  }  
+
   render() {
+    console.log("redner" , this.props)
+
     const token = localStorage.getItem("jwtToken")
     console.log('token', token)
     return (
