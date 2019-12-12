@@ -9,7 +9,7 @@ class QuestionAbm extends Component {
       this.delete = this.delete.bind(this)
       this.save = this.save.bind(this)
       this.back = this.back.bind(this)
-   }
+  }
 
   save = () => {
     if (

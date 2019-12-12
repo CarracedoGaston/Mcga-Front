@@ -1,12 +1,21 @@
 import { connect } from 'react-redux'
-// import { bindActionCreators } from 'redux'
+import { bindActionCreators } from 'redux'
 import Login from './view'
+import { isAuth } from './../../../redux/actions/users'
 
 const mapStateToProps = (state, ownProps) => {
   return {
     users: state.users.list,
-    isLoading: state.users.isLoading
+    isLoading: state.users.isLoading, 
+    isAuth: state.users.isAuth
   }
 }
 
-export default connect(mapStateToProps)(Login)
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators(
+    { isAuth }, 
+    dispatch
+  )
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)

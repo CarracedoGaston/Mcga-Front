@@ -15,7 +15,7 @@ class Login extends Component {
   move = (data) => {
     const myStorage = window.localStorage
     myStorage.setItem('token', JSON.stringify(data['_id']))
-    window.location = "/home"
+    this.props.history.push('/home')
   }
 
   loginAccount = () => {
@@ -27,14 +27,14 @@ class Login extends Component {
     .then(data  => {
       localStorage.setItem('token', data.token)
       localStorage.setItem('user', data.user)
+      this.props.isAuth(true)
+      this.props.history.push('/home')
     })
    // .catch((err => this.props.setError(err)))
     .catch((err => console.log(err)))
-    window.location = "/home"
   }
  
-  add = () => {
-    
+  add = () => {  
     if (
       document.getElementById('inputName').value !== "" &&
       document.getElementById('inputPassword').value !== "" &&
@@ -48,7 +48,6 @@ class Login extends Component {
         // .then(data => this.props.loadProducts(data))
         //   .catch(err => this.props.setError(err))
         //is not necesary decode token because createacount redirect to login. so decode token is in the login form
-
       window.alert('User Saved')
       document.getElementById('inputName').value = ""
       document.getElementById('inputPassword').value = ""
@@ -65,13 +64,12 @@ class Login extends Component {
   }
 
   render() {
-        
     return (
       <MainLayout>
         <div className="Container">
           <div id="login">
             <input className="inputLogin" id="inputName" placeholder=" Name"></input>
-            <input className="inputLogin"  id="inputPassword" placeholder=" Password"></input>
+            <input className="inputLogin"  id="inputPassword" placeholder=" Password" type="password"></input>
             <input id="inputCreateAccount" placeholder=" Email"></input>
           </div>
           <div id="buttonsLoginContainer">
