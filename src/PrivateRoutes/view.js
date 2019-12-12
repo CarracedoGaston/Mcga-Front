@@ -37,7 +37,7 @@ class PrivateRoutes extends Component {
             <Redirect from="/" to="/home" />
           </Switch>
         </BrowserRouter>
-        )
+      )
     }
   }
 }

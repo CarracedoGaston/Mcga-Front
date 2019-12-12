@@ -6,11 +6,11 @@ import PrivateRoutes from './PrivateRoutes'
 
 class App extends Component {
   render() {
-      return (
+    return (
       <Provider store={store}>
           <PrivateRoutes/>
       </Provider>
-      )
+    )
   }
 }
 

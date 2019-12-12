@@ -15,9 +15,9 @@ class Logout extends Component {
     return (  
       <MainLayout>
         <div className="Container">
-         <div id="buttonsLoginContainer">
+          <div id="buttonsLoginContainer">
             <button id="buttonLogin" className="buttonLogin" onClick={this.logout}>Log Out</button>
-         </div>
+          </div>
         </div>
       </MainLayout>
     )
