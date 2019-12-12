@@ -15,20 +15,20 @@ class MainLayout extends Component {
 
   MenuShowHide() {
     document.getElementById('Menu').style.display === 'flex'?
-      document.getElementById('Menu').style.display = 'none':
-      document.getElementById('Menu').style.display = 'flex'  
+    document.getElementById('Menu').style.display = 'none':
+    document.getElementById('Menu').style.display = 'flex'  
     document.getElementById('Dark').style.display === 'flex'?
-      document.getElementById('Dark').style.display = 'none':
-      document.getElementById('Dark').style.display = 'flex'
+    document.getElementById('Dark').style.display = 'none':
+    document.getElementById('Dark').style.display = 'flex'
   }
 
   MenuOut() {
     document.getElementById('Menu').style.display === 'flex'?
-      document.getElementById('Menu').style.display = 'none':
-      document.getElementById('Menu').style.display = 'flex'  
+    document.getElementById('Menu').style.display = 'none':
+    document.getElementById('Menu').style.display = 'flex'  
     document.getElementById('Dark').style.display === 'flex'?
-      document.getElementById('Dark').style.display = 'none':
-      document.getElementById('Dark').style.display = 'flex'
+    document.getElementById('Dark').style.display = 'none':
+    document.getElementById('Dark').style.display = 'flex'
   }
 
   componentDidMount(){
@@ -62,7 +62,6 @@ class MainLayout extends Component {
 
   render() {
     return (
-      
       <div id="MainLayout">
         <div id="header" className='color' style={{color: this.state.colorHeader}}>
           {window.location.pathname.split('/')}  

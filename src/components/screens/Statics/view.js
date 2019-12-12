@@ -39,7 +39,6 @@ class Statics extends Component {
         secondQuantity: '0',
         thirdQuantity: '0' 
       }
-
       fetchPut(`question/${this.props.selectedQuestion._id}`, {
         questionUptitle: document.getElementById('questionToMake').value,
         user: localStorage.user, 
@@ -67,7 +66,6 @@ class Statics extends Component {
   delete = () => {
     const headers = {'authorization': `Bearer ${localStorage.token}`}
     fetchDelete(`question/${this.props.selectedQuestion._id}`, null, headers)
-    .then(data => console.log("resultado", data))
     .catch((err => console.log(err)))
     this.props.deleteQuestion(this.props.selectedQuestion._id)
   }
