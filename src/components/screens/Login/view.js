@@ -11,27 +11,25 @@ class Login extends Component {
     document.getElementById('buttonLogin').style.display = 'none'
     document.getElementById('buttonSave').style.display = 'flex'
   }
-  
-  move = (data) => {
-    const myStorage = window.localStorage
-    myStorage.setItem('token', JSON.stringify(data['_id']))
-    this.props.history.push('/home')
-  }
 
   loginAccount = () => {
     fetchPost('user/signIn/', {
       name: document.getElementById('inputName').value,
       password: document.getElementById('inputPassword').value
     })
-    //.then(data  => console.log(data))
     .then(data  => {
+      if (data.msg !== 'Invalid Email or password') {
+        // localStorage.setItem('user', data.user)
       localStorage.setItem('token', data.token)
-      localStorage.setItem('user', data.user)
       this.props.isAuth(true)
       this.props.history.push('/home')
+      }
+      else {
+        document.getElementById('inputName').value = ""
+        document.getElementById('inputPassword').value = ""
+        window.alert('Invalid data')
+      }
     })
-   // .catch((err => this.props.setError(err)))
-    .catch((err => console.log(err)))
   }
  
   add = () => {  
@@ -45,9 +43,6 @@ class Login extends Component {
         email: document.getElementById('inputCreateAccount').value,
         password: document.getElementById('inputPassword').value
         })
-        // .then(data => this.props.loadProducts(data))
-        //   .catch(err => this.props.setError(err))
-        //is not necesary decode token because createacount redirect to login. so decode token is in the login form
       window.alert('User Saved')
       document.getElementById('inputName').value = ""
       document.getElementById('inputPassword').value = ""

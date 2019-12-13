@@ -33,7 +33,7 @@ const reducer = (state=initialState, action) => {
           ...state,
           selectedQuestion: null,
           questions: state.questions.map((question)=> 
-          question._id==action.payload._id ? 
+          question._id === action.payload._id ? 
           action.payload : question)
       }  
     default:

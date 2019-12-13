@@ -15,7 +15,8 @@ import Logout from '../components/screens/Logout'
 
 class PrivateRoutes extends Component {
   render() {
-    if(this.props.isAuth===false){
+    //if (this.props.isAuth === false){
+    if (localStorage.getItem('token') === null){
       return (
         <BrowserRouter>
           <Switch>

@@ -75,19 +75,10 @@ class MainLayout extends Component {
               <Link to="/home"><li className="link">
                 <div id="homeImg" className="imgsMenu"></div>Home</li>
               </Link>
-              {localStorage.getItem('token')!==null
-              ?
               <Link to="/login"><li className="link">
                 <div id="loginImg" className="imgsMenu"></div>Login</li>
               </Link>  
-              :
-              <Link to="/logout"><li className="link">
-                <div id="loginImg" className="imgsMenu"></div>Login</li>
-              </Link>  
-              }    
             </div>
-            {localStorage.getItem('token')!==null
-            ?
             <div id="privateSection">
               <Link to="/questions"><li className="link">
                 <div id="questionImg" className="imgsMenu"></div>Questions</li>
@@ -96,16 +87,6 @@ class MainLayout extends Component {
                 <div id="staticImg" className="imgsMenu"></div>Statics</li>
               </Link>
             </div>
-            :
-            <div id="privateSection">
-              <Link to="/login"><li className="link">
-                <div id="questionImg" className="imgsMenu"></div>Questions</li>
-              </Link>
-              <Link to="/login"><li className="link">
-                <div id="staticImg" className="imgsMenu"></div>Statics</li>
-              </Link>
-            </div>
-            }
           </ul>
         </div>      
         <div id="MainContainer" style={{backgroundColor: this.state.backgroundApp}}>
