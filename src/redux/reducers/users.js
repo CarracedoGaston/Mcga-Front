@@ -4,7 +4,7 @@ const initialState = {
   isLoading: false,
   error: '',
   user: {}, 
-  isAuth: false
+  isAuth: false,
 }
 
 const reducer = (state=initialState, action) => {

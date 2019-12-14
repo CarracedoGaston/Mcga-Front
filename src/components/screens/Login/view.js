@@ -18,9 +18,9 @@ class Login extends Component {
       password: document.getElementById('inputPassword').value
     })
     .then(data  => {
-      if (data.msg !== 'Invalid Email or password') {
-        // localStorage.setItem('user', data.user)
+      if (data !== null) {
       localStorage.setItem('token', data.token)
+      localStorage.setItem('user', data.user)
       this.props.isAuth(true)
       this.props.history.push('/home')
       }

@@ -8,15 +8,14 @@ class Statics extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      question: null
+      question: null,
+      select: false
     }
-    this.showElement = this.showElement.bind(this)
   }
 
   componentDidMount(){
     fetchApi(`question/user/${localStorage.user}`)    
-    .then(data => this.props.loadQuestions(data))
-    // .catch(err => this.props.setError(err))
+      .then(data => this.props.loadQuestions(data))
   }
 
   update = () => {
@@ -50,8 +49,8 @@ class Statics extends Component {
         thirdQuantity: '0'
       }, headers) 
       .then(this.props.updateQuestion(questionUpd))
-        //   .catch(err => this.props.setError(err)) 
       window.alert('Question Updated')    
+      this.setState({select: false})
     }
     else {
       window.alert('Complete all the data')
@@ -61,6 +60,7 @@ class Statics extends Component {
 
   back = () => {
     this.props.loadQuestionById(null)
+    this.setState({select: false})
   }
 
   delete = () => {
@@ -68,11 +68,13 @@ class Statics extends Component {
     fetchDelete(`question/${this.props.selectedQuestion._id}`, null, headers)
     .catch((err => console.log(err)))
     this.props.deleteQuestion(this.props.selectedQuestion._id)
+    this.setState({select: false})
   }
 
   showElement = (event) => {    
     const result =this.props.questions.find(question => question._id === event.target.value)
-    this.props.loadQuestionById(result)
+    this.props.loadQuestionById(result) 
+    this.setState({select: true}) 
   }
   
   renderList = () => {
@@ -86,7 +88,7 @@ class Statics extends Component {
   }
 
   render() {
-    if (this.props.selectedQuestion!== null&&this.props.selectedQuestion!== {})
+    if (this.state.select)
     {
       return (
         <MainLayout>
@@ -115,7 +117,6 @@ class Statics extends Component {
                 { this.renderList() }
               </ul>
             </div>    
-          <div>Please.Select one question</div>
         </div>
       </MainLayout>
       )

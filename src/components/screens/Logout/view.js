@@ -8,7 +8,7 @@ class Logout extends Component {
     const myStorage = window.localStorage
     this.props.isAuth(false)
     myStorage.clear()  
-    this.props.history.push('/login')
+    this.props.history.push('/home')
   }
 
   render() {     
