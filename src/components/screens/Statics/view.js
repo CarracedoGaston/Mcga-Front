@@ -94,10 +94,19 @@ class Statics extends Component {
         <MainLayout>
           <div className="Container">
             <div id="newQuestion">
-            <textarea id="questionToMake" defaultValue={this.props.selectedQuestion.title} readOnly={false}/>  
-              <input className="inputAnswer" id="questionFirstAnswer" defaultValue={this.props.selectedQuestion.firstAnswer}/>
-              <input className="inputAnswer" id="questionSecondAnswer" defaultValue={this.props.selectedQuestion.secondAnswer}/>
-              <input className="inputAnswer" id="questionThirdAnswer" defaultValue={this.props.selectedQuestion.thirdAnswer}/> 
+              <textarea id="questionToMakeStatic" defaultValue={this.props.selectedQuestion.title} readOnly={false}/>  
+              <div className="ValuesStyle">
+                <input className="inputAnswerStatic" id="questionFirstAnswer" defaultValue={this.props.selectedQuestion.firstAnswer}/> 
+                <span className="spanValue">{this.props.selectedQuestion.firstQuantity}</span>
+              </div>
+             <div className="ValuesStyle">
+               <input className="inputAnswerStatic" id="questionSecondAnswer" defaultValue={this.props.selectedQuestion.secondAnswer}/> 
+               <span className="spanValue">{this.props.selectedQuestion.secondQuantity}</span>
+             </div>
+              <div className="ValuesStyle">
+               <input className="inputAnswerStatic" id="questionThirdAnswer" defaultValue={this.props.selectedQuestion.thirdAnswer}/> 
+               <span className="spanValue">{this.props.selectedQuestion.thirdQuantity}</span>
+             </div>
             </div>
             <div className="buttonAbmQuestion">
               <div className="buttonsTop">
