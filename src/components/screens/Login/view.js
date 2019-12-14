@@ -5,6 +5,14 @@ import { fetchPost } from '../../../helpers/fetch'
 
 class Login extends Component {
 
+  constructor(props) {
+    super(props)
+    this.state = {
+      error:'',
+      isError: false
+    }
+  }
+
   createAccount() {
     document.getElementById('inputCreateAccount').style.display = 'flex'
     document.getElementById('createAccount').style.display = 'none'
@@ -23,15 +31,21 @@ class Login extends Component {
       name: document.getElementById('inputName').value,
       password: document.getElementById('inputPassword').value
     })
-    //.then(data  => console.log(data))
     .then(data  => {
-      localStorage.setItem('token', data.token)
-      localStorage.setItem('user', data.user)
-      this.props.isAuth(true)
-      this.props.history.push('/home')
+      console.log("date",  data)   
+      if (!data.error)
+      {
+        localStorage.setItem('token', data.token)
+        localStorage.setItem('user', data.user)
+        this.props.isAuth(true)
+        this.props.history.push('/home')
+      }
+      else
+      {
+        this.setState({error:data.msg, isError: true})
+      }
+
     })
-   // .catch((err => this.props.setError(err)))
-    .catch((err => console.log(err)))
   }
  
   add = () => {  
@@ -71,6 +85,7 @@ class Login extends Component {
             <input className="inputLogin" id="inputName" placeholder=" Name"></input>
             <input className="inputLogin"  id="inputPassword" placeholder=" Password" type="password"></input>
             <input id="inputCreateAccount" placeholder=" Email"></input>
+            <div className="Message">{this.state.error}</div> 
           </div>
           <div id="buttonsLoginContainer">
             <div id="createAccount" onClick={this.createAccount}>Create Account</div>
@@ -79,6 +94,7 @@ class Login extends Component {
           </div>
         </div>
       </MainLayout>
+
     )
   }
 }
