@@ -100,9 +100,13 @@ class Statics extends Component {
               <input className="inputAnswer" id="questionThirdAnswer" defaultValue={this.props.selectedQuestion.thirdAnswer}/> 
             </div>
             <div className="buttonAbmQuestion">
-              <button className="buttonQuestionAbm" onClick={this.update}>Save</button>
-              <button className="buttonQuestionAbm" onClick={this.delete}>Delete</button>
-              <button className="buttonQuestionAbm" onClick={this.back}>Back</button>
+              <div className="buttonsTop">
+                <button id="buttonQuestionSave" onClick={this.update}>Save</button>
+              </div>
+              <div className="buttonsBottom">
+                <button className="buttonQuestionAbm" onClick={this.delete}>Delete</button>
+                <button className="buttonQuestionAbm" onClick={this.back}>Back</button>
+              </div> 
             </div>        
           </div> 
         </MainLayout>
