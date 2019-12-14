@@ -80,7 +80,7 @@ class Statics extends Component {
   renderList = () => {
     return this.props.questions.map( question => {
       return (
-        <li key={ question._id } className="staticQuestion">
+        <li key={ question._id } className="staticQuestionValues">
           <button value = {question._id}  onClick={this.showElement}>{question.title}</button>
         </li>
       )
