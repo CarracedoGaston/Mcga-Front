@@ -20,7 +20,7 @@ class Statics extends Component {
 
   update = () => {
     if (
-      document.getElementById('questionToMake').value !== "" &&
+      document.getElementById('questionToMakeStatic').value !== "" &&
       document.getElementById('questionFirstAnswer').value !== "" &&
       document.getElementById('questionSecondAnswer').value !== "" &&
       document.getElementById('questionThirdAnswer').value !== ""
@@ -29,7 +29,7 @@ class Statics extends Component {
       const headers = {'authorization': `Bearer ${localStorage.token}`}
       const questionUpd = {
         _id: this.props.selectedQuestion._id,
-        title: document.getElementById('questionToMake').value,
+        title: document.getElementById('questionToMakeStatic').value,
         user: localStorage.user, 
         firstAnswer: document.getElementById('questionFirstAnswer').value,
         secondAnswer: document.getElementById('questionSecondAnswer').value,
@@ -39,7 +39,7 @@ class Statics extends Component {
         thirdQuantity: '0' 
       }
       fetchPut(`question/${this.props.selectedQuestion._id}`, {
-        questionUptitle: document.getElementById('questionToMake').value,
+        questionUptitle: document.getElementById('questionToMakeStatic').value,
         user: localStorage.user, 
         firstAnswer: document.getElementById('questionFirstAnswer').value,
         secondAnswer: document.getElementById('questionSecondAnswer').value,
