@@ -62,7 +62,7 @@ class Home extends Component {
     return (
       <MainLayout>
         <div className="Container">
-          {!(this.props.position===this.props.questions.length)?
+          {!(this.props.position>=this.props.questions.length)?
           <div id="questionPlay">
             <div id="questionToAnswer">
               <h1>{this.props.questions[this.props.position].title}</h1>
